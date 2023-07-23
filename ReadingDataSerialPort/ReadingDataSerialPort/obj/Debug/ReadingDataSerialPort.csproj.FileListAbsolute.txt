@@ -1,0 +1,12 @@
+c:\users\abwhab\documents\visual studio 2015\Projects\ReadingDataSerialPort\ReadingDataSerialPort\bin\Debug\ReadingDataSerialPort.exe.config
+c:\users\abwhab\documents\visual studio 2015\Projects\ReadingDataSerialPort\ReadingDataSerialPort\bin\Debug\ReadingDataSerialPort.exe
+c:\users\abwhab\documents\visual studio 2015\Projects\ReadingDataSerialPort\ReadingDataSerialPort\bin\Debug\ReadingDataSerialPort.pdb
+c:\users\abwhab\documents\visual studio 2015\Projects\ReadingDataSerialPort\ReadingDataSerialPort\obj\Debug\ReadingDataSerialPort.exe
+c:\users\abwhab\documents\visual studio 2015\Projects\ReadingDataSerialPort\ReadingDataSerialPort\obj\Debug\ReadingDataSerialPort.pdb
+C:\Users\Abwhab\Documents\Visual Studio 2015\Projects\ReadingDataSerialPort\ReadingDataSerialPort\obj\Debug\ReadingDataSerialPort.csprojResolveAssemblyReference.cache
+C:\Users\Abwhab\Desktop\ultrasonic\ReadingDataSerialPort\ReadingDataSerialPort\bin\Debug\ReadingDataSerialPort.exe.config
+C:\Users\Abwhab\Desktop\ultrasonic\ReadingDataSerialPort\ReadingDataSerialPort\obj\Debug\ReadingDataSerialPort.exe
+C:\Users\Abwhab\Desktop\ultrasonic\ReadingDataSerialPort\ReadingDataSerialPort\obj\Debug\ReadingDataSerialPort.pdb
+C:\Users\Abwhab\Desktop\ultrasonic\ReadingDataSerialPort\ReadingDataSerialPort\bin\Debug\ReadingDataSerialPort.exe
+C:\Users\Abwhab\Desktop\ultrasonic\ReadingDataSerialPort\ReadingDataSerialPort\bin\Debug\ReadingDataSerialPort.pdb
+C:\Users\Abwhab\Desktop\ultrasonic\ReadingDataSerialPort\ReadingDataSerialPort\obj\Debug\ReadingDataSerialPort.csprojResolveAssemblyReference.cache
