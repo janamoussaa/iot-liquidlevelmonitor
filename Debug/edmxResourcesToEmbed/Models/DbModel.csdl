@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="iotModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="acc_sensor_analytics">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="value" Type="Double" Nullable="false" />
+    <Property Name="creationTime" Type="DateTime" Nullable="false" />
+    <Property Name="sensor_id" Type="Int32" />
+    <NavigationProperty Name="acc_sensors" Relationship="Self.sens_Id" FromRole="acc_sensor_analytics" ToRole="acc_sensors" />
+  </EntityType>
+  <EntityType Name="acc_sensors">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lng" Type="Double" />
+    <Property Name="parent" Type="Int32" />
+    <Property Name="max_value" Type="Int32" />
+    <Property Name="min_value" Type="Int32" />
+    <Property Name="lastValue" Type="Double" />
+    <Property Name="lastUpdateTime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="acc_sensor_analytics" Relationship="Self.sens_Id" FromRole="acc_sensors" ToRole="acc_sensor_analytics" />
+  </EntityType>
+  <Association Name="sens_Id">
+    <End Role="acc_sensors" Type="Self.acc_sensors" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_sensor_analytics" Type="Self.acc_sensor_analytics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_sensors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_sensor_analytics">
+        <PropertyRef Name="sensor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="iotEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="acc_sensor_analytics" EntityType="Self.acc_sensor_analytics" />
+    <EntitySet Name="acc_sensors" EntityType="Self.acc_sensors" />
+    <AssociationSet Name="sens_Id" Association="Self.sens_Id">
+      <End Role="acc_sensors" EntitySet="acc_sensors" />
+      <End Role="acc_sensor_analytics" EntitySet="acc_sensor_analytics" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

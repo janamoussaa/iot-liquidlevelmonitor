@@ -1,0 +1,582 @@
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\roslyn\csc.exe
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\roslyn\System.Collections.Immutable.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\roslyn\vbc.exe
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\roslyn\VBCSCompiler.exe
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\roslyn\VBCSCompiler.exe.config
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\UETV.dll.config
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\UETV.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\UETV.pdb
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\EntityFramework.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\EntityFramework.SqlServer.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Microsoft.Web.Infrastructure.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\MySql.Data.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\MySql.Data.Entity.EF6.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Newtonsoft.Json.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Net.Http.Formatting.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Helpers.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Http.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Http.WebHost.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Mvc.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Razor.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Webpages.Deployment.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Webpages.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Webpages.Razor.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\EntityFramework.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\EntityFramework.SqlServer.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\MySql.Data.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\MySql.Data.Entity.EF6.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Razor.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Webpages.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Webpages.Deployment.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Webpages.Razor.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Helpers.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Mvc.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Newtonsoft.Json.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Net.Http.Formatting.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Http.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Http.WebHost.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\obj\Debug\UETV.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\obj\Debug\UETV.pdb
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\ApplicationInsights.config
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Microsoft.AI.Web.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Microsoft.AI.WindowsServer.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Microsoft.ApplicationInsights.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Microsoft.AI.Web.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Microsoft.AI.WindowsServer.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Microsoft.ApplicationInsights.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Antlr3.Runtime.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\FromHeaderAttribute.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Swagger.Net.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Swashbuckle.Core.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Swashbuckle.Examples.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Cors.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Optimization.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\WebGrease.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\Antlr3.Runtime.pdb
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Optimization.xml
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Http.Cors.dll
+c:\users\ahmed abdelwahab\documents\visual studio 2015\Projects\UETV\UETV\bin\System.Web.Http.Cors.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\ApplicationInsights.config
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\roslyn\csc.exe
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\roslyn\vbc.exe
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\roslyn\VBCSCompiler.exe
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\UETV.dll.config
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\UETV.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\UETV.pdb
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Antlr3.Runtime.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\EntityFramework.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\EntityFramework.SqlServer.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\FromHeaderAttribute.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Microsoft.AI.Web.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\MySql.Data.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\MySql.Data.Entity.EF6.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Newtonsoft.Json.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Swagger.Net.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Swashbuckle.Core.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Swashbuckle.Examples.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Net.Http.Formatting.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Cors.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Helpers.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Http.Cors.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Http.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Http.WebHost.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Mvc.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Optimization.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Razor.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Webpages.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Webpages.Razor.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\WebGrease.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Antlr3.Runtime.pdb
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\EntityFramework.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\EntityFramework.SqlServer.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Microsoft.AI.Web.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\MySql.Data.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\MySql.Data.Entity.EF6.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\Newtonsoft.Json.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Net.Http.Formatting.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Http.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Http.Cors.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Http.WebHost.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Optimization.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Razor.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Webpages.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Webpages.Razor.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Helpers.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\bin\System.Web.Mvc.xml
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\obj\Debug\UETV.dll
+C:\Users\Ahmed Abdelwahab\Documents\Visual Studio 2015\Projects\uetv back\UETV\UETV\obj\Debug\UETV.pdb
+F:\UETV Bola Version\UETV\UETV\bin\ApplicationInsights.config
+F:\UETV Bola Version\UETV\UETV\bin\roslyn\csc.exe
+F:\UETV Bola Version\UETV\UETV\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\UETV Bola Version\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\UETV Bola Version\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\UETV Bola Version\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\UETV Bola Version\UETV\UETV\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\UETV Bola Version\UETV\UETV\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\UETV Bola Version\UETV\UETV\bin\roslyn\System.Collections.Immutable.dll
+F:\UETV Bola Version\UETV\UETV\bin\roslyn\System.Reflection.Metadata.dll
+F:\UETV Bola Version\UETV\UETV\bin\roslyn\vbc.exe
+F:\UETV Bola Version\UETV\UETV\bin\roslyn\VBCSCompiler.exe
+F:\UETV Bola Version\UETV\UETV\bin\roslyn\VBCSCompiler.exe.config
+F:\UETV Bola Version\UETV\UETV\bin\UETV.dll.config
+F:\UETV Bola Version\UETV\UETV\bin\UETV.dll
+F:\UETV Bola Version\UETV\UETV\bin\UETV.pdb
+F:\UETV Bola Version\UETV\UETV\bin\Antlr3.Runtime.dll
+F:\UETV Bola Version\UETV\UETV\bin\EntityFramework.dll
+F:\UETV Bola Version\UETV\UETV\bin\EntityFramework.SqlServer.dll
+F:\UETV Bola Version\UETV\UETV\bin\FromHeaderAttribute.dll
+F:\UETV Bola Version\UETV\UETV\bin\Microsoft.AI.Agent.Intercept.dll
+F:\UETV Bola Version\UETV\UETV\bin\Microsoft.AI.DependencyCollector.dll
+F:\UETV Bola Version\UETV\UETV\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\UETV Bola Version\UETV\UETV\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\UETV Bola Version\UETV\UETV\bin\Microsoft.AI.Web.dll
+F:\UETV Bola Version\UETV\UETV\bin\Microsoft.AI.WindowsServer.dll
+F:\UETV Bola Version\UETV\UETV\bin\Microsoft.ApplicationInsights.dll
+F:\UETV Bola Version\UETV\UETV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\UETV Bola Version\UETV\UETV\bin\Microsoft.Web.Infrastructure.dll
+F:\UETV Bola Version\UETV\UETV\bin\MySql.Data.dll
+F:\UETV Bola Version\UETV\UETV\bin\MySql.Data.Entity.EF6.dll
+F:\UETV Bola Version\UETV\UETV\bin\Newtonsoft.Json.dll
+F:\UETV Bola Version\UETV\UETV\bin\Swagger.Net.dll
+F:\UETV Bola Version\UETV\UETV\bin\Swashbuckle.Core.dll
+F:\UETV Bola Version\UETV\UETV\bin\Swashbuckle.Examples.dll
+F:\UETV Bola Version\UETV\UETV\bin\System.Net.Http.Formatting.dll
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Cors.dll
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Helpers.dll
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Http.Cors.dll
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Http.dll
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Http.WebHost.dll
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Mvc.dll
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Optimization.dll
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Razor.dll
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Webpages.Deployment.dll
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Webpages.dll
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Webpages.Razor.dll
+F:\UETV Bola Version\UETV\UETV\bin\WebGrease.dll
+F:\UETV Bola Version\UETV\UETV\bin\Antlr3.Runtime.pdb
+F:\UETV Bola Version\UETV\UETV\bin\EntityFramework.xml
+F:\UETV Bola Version\UETV\UETV\bin\EntityFramework.SqlServer.xml
+F:\UETV Bola Version\UETV\UETV\bin\Microsoft.AI.DependencyCollector.xml
+F:\UETV Bola Version\UETV\UETV\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\UETV Bola Version\UETV\UETV\bin\Microsoft.AI.Web.xml
+F:\UETV Bola Version\UETV\UETV\bin\Microsoft.AI.WindowsServer.xml
+F:\UETV Bola Version\UETV\UETV\bin\Microsoft.ApplicationInsights.xml
+F:\UETV Bola Version\UETV\UETV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\UETV Bola Version\UETV\UETV\bin\MySql.Data.xml
+F:\UETV Bola Version\UETV\UETV\bin\MySql.Data.Entity.EF6.xml
+F:\UETV Bola Version\UETV\UETV\bin\Newtonsoft.Json.xml
+F:\UETV Bola Version\UETV\UETV\bin\System.Net.Http.Formatting.xml
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Http.xml
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Http.Cors.xml
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Http.WebHost.xml
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Optimization.xml
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Razor.xml
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Webpages.xml
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Webpages.Deployment.xml
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Webpages.Razor.xml
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Helpers.xml
+F:\UETV Bola Version\UETV\UETV\bin\System.Web.Mvc.xml
+F:\UETV Bola Version\UETV\UETV\obj\Debug\UETV.dll
+F:\UETV Bola Version\UETV\UETV\obj\Debug\UETV.pdb
+F:\UETV Bola Version\UETV\UETV\obj\Debug\UETV.csprojResolveAssemblyReference.cache
+F:\UETV\UETV\bin\ApplicationInsights.config
+F:\UETV\UETV\bin\roslyn\csc.exe
+F:\UETV\UETV\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\UETV\UETV\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\UETV\UETV\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\UETV\UETV\bin\roslyn\System.Collections.Immutable.dll
+F:\UETV\UETV\bin\roslyn\System.Reflection.Metadata.dll
+F:\UETV\UETV\bin\roslyn\vbc.exe
+F:\UETV\UETV\bin\roslyn\VBCSCompiler.exe
+F:\UETV\UETV\bin\roslyn\VBCSCompiler.exe.config
+F:\UETV\UETV\bin\UETV.dll.config
+F:\UETV\UETV\bin\UETV.dll
+F:\UETV\UETV\bin\UETV.pdb
+F:\UETV\UETV\bin\Antlr3.Runtime.dll
+F:\UETV\UETV\bin\EntityFramework.dll
+F:\UETV\UETV\bin\EntityFramework.SqlServer.dll
+F:\UETV\UETV\bin\FromHeaderAttribute.dll
+F:\UETV\UETV\bin\Microsoft.AI.Agent.Intercept.dll
+F:\UETV\UETV\bin\Microsoft.AI.DependencyCollector.dll
+F:\UETV\UETV\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\UETV\UETV\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\UETV\UETV\bin\Microsoft.AI.Web.dll
+F:\UETV\UETV\bin\Microsoft.AI.WindowsServer.dll
+F:\UETV\UETV\bin\Microsoft.ApplicationInsights.dll
+F:\UETV\UETV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\UETV\UETV\bin\Microsoft.Web.Infrastructure.dll
+F:\UETV\UETV\bin\MySql.Data.dll
+F:\UETV\UETV\bin\MySql.Data.Entity.EF6.dll
+F:\UETV\UETV\bin\Newtonsoft.Json.dll
+F:\UETV\UETV\bin\Swagger.Net.dll
+F:\UETV\UETV\bin\Swashbuckle.Core.dll
+F:\UETV\UETV\bin\Swashbuckle.Examples.dll
+F:\UETV\UETV\bin\System.Net.Http.Formatting.dll
+F:\UETV\UETV\bin\System.Web.Cors.dll
+F:\UETV\UETV\bin\System.Web.Helpers.dll
+F:\UETV\UETV\bin\System.Web.Http.Cors.dll
+F:\UETV\UETV\bin\System.Web.Http.dll
+F:\UETV\UETV\bin\System.Web.Http.WebHost.dll
+F:\UETV\UETV\bin\System.Web.Mvc.dll
+F:\UETV\UETV\bin\System.Web.Optimization.dll
+F:\UETV\UETV\bin\System.Web.Razor.dll
+F:\UETV\UETV\bin\System.Web.Webpages.Deployment.dll
+F:\UETV\UETV\bin\System.Web.Webpages.dll
+F:\UETV\UETV\bin\System.Web.Webpages.Razor.dll
+F:\UETV\UETV\bin\WebGrease.dll
+F:\UETV\UETV\bin\Antlr3.Runtime.pdb
+F:\UETV\UETV\bin\EntityFramework.xml
+F:\UETV\UETV\bin\EntityFramework.SqlServer.xml
+F:\UETV\UETV\bin\Microsoft.AI.DependencyCollector.xml
+F:\UETV\UETV\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\UETV\UETV\bin\Microsoft.AI.Web.xml
+F:\UETV\UETV\bin\Microsoft.AI.WindowsServer.xml
+F:\UETV\UETV\bin\Microsoft.ApplicationInsights.xml
+F:\UETV\UETV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\UETV\UETV\bin\MySql.Data.xml
+F:\UETV\UETV\bin\MySql.Data.Entity.EF6.xml
+F:\UETV\UETV\bin\Newtonsoft.Json.xml
+F:\UETV\UETV\bin\System.Net.Http.Formatting.xml
+F:\UETV\UETV\bin\System.Web.Http.xml
+F:\UETV\UETV\bin\System.Web.Http.Cors.xml
+F:\UETV\UETV\bin\System.Web.Http.WebHost.xml
+F:\UETV\UETV\bin\System.Web.Optimization.xml
+F:\UETV\UETV\bin\System.Web.Razor.xml
+F:\UETV\UETV\bin\System.Web.Webpages.xml
+F:\UETV\UETV\bin\System.Web.Webpages.Deployment.xml
+F:\UETV\UETV\bin\System.Web.Webpages.Razor.xml
+F:\UETV\UETV\bin\System.Web.Helpers.xml
+F:\UETV\UETV\bin\System.Web.Mvc.xml
+F:\UETV\UETV\obj\Debug\UETV.dll
+F:\UETV\UETV\obj\Debug\UETV.pdb
+F:\UETV\UETV\bin\BarcodeLib.dll
+F:\UETV\UETV\obj\Debug\UETV.csprojResolveAssemblyReference.cache
+F:\UETV_V2\UETV\UETV\bin\ApplicationInsights.config
+F:\UETV_V2\UETV\UETV\bin\roslyn\csc.exe
+F:\UETV_V2\UETV\UETV\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\UETV_V2\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\UETV_V2\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\UETV_V2\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\UETV_V2\UETV\UETV\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\UETV_V2\UETV\UETV\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\UETV_V2\UETV\UETV\bin\roslyn\System.Collections.Immutable.dll
+F:\UETV_V2\UETV\UETV\bin\roslyn\System.Reflection.Metadata.dll
+F:\UETV_V2\UETV\UETV\bin\roslyn\vbc.exe
+F:\UETV_V2\UETV\UETV\bin\roslyn\VBCSCompiler.exe
+F:\UETV_V2\UETV\UETV\bin\roslyn\VBCSCompiler.exe.config
+F:\UETV_V2\UETV\UETV\bin\UETV.dll.config
+F:\UETV_V2\UETV\UETV\bin\UETV.dll
+F:\UETV_V2\UETV\UETV\bin\UETV.pdb
+F:\UETV_V2\UETV\UETV\bin\Antlr3.Runtime.dll
+F:\UETV_V2\UETV\UETV\bin\BarcodeLib.dll
+F:\UETV_V2\UETV\UETV\bin\EntityFramework.dll
+F:\UETV_V2\UETV\UETV\bin\EntityFramework.SqlServer.dll
+F:\UETV_V2\UETV\UETV\bin\FromHeaderAttribute.dll
+F:\UETV_V2\UETV\UETV\bin\Microsoft.AI.Agent.Intercept.dll
+F:\UETV_V2\UETV\UETV\bin\Microsoft.AI.DependencyCollector.dll
+F:\UETV_V2\UETV\UETV\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\UETV_V2\UETV\UETV\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\UETV_V2\UETV\UETV\bin\Microsoft.AI.Web.dll
+F:\UETV_V2\UETV\UETV\bin\Microsoft.AI.WindowsServer.dll
+F:\UETV_V2\UETV\UETV\bin\Microsoft.ApplicationInsights.dll
+F:\UETV_V2\UETV\UETV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\UETV_V2\UETV\UETV\bin\Microsoft.Web.Infrastructure.dll
+F:\UETV_V2\UETV\UETV\bin\MySql.Data.dll
+F:\UETV_V2\UETV\UETV\bin\MySql.Data.Entity.EF6.dll
+F:\UETV_V2\UETV\UETV\bin\Newtonsoft.Json.dll
+F:\UETV_V2\UETV\UETV\bin\Swagger.Net.dll
+F:\UETV_V2\UETV\UETV\bin\Swashbuckle.Core.dll
+F:\UETV_V2\UETV\UETV\bin\Swashbuckle.Examples.dll
+F:\UETV_V2\UETV\UETV\bin\System.Net.Http.Formatting.dll
+F:\UETV_V2\UETV\UETV\bin\System.Web.Cors.dll
+F:\UETV_V2\UETV\UETV\bin\System.Web.Helpers.dll
+F:\UETV_V2\UETV\UETV\bin\System.Web.Http.Cors.dll
+F:\UETV_V2\UETV\UETV\bin\System.Web.Http.dll
+F:\UETV_V2\UETV\UETV\bin\System.Web.Http.WebHost.dll
+F:\UETV_V2\UETV\UETV\bin\System.Web.Mvc.dll
+F:\UETV_V2\UETV\UETV\bin\System.Web.Optimization.dll
+F:\UETV_V2\UETV\UETV\bin\System.Web.Razor.dll
+F:\UETV_V2\UETV\UETV\bin\System.Web.Webpages.Deployment.dll
+F:\UETV_V2\UETV\UETV\bin\System.Web.Webpages.dll
+F:\UETV_V2\UETV\UETV\bin\System.Web.Webpages.Razor.dll
+F:\UETV_V2\UETV\UETV\bin\WebGrease.dll
+F:\UETV_V2\UETV\UETV\bin\Antlr3.Runtime.pdb
+F:\UETV_V2\UETV\UETV\bin\EntityFramework.xml
+F:\UETV_V2\UETV\UETV\bin\EntityFramework.SqlServer.xml
+F:\UETV_V2\UETV\UETV\bin\Microsoft.AI.DependencyCollector.xml
+F:\UETV_V2\UETV\UETV\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\UETV_V2\UETV\UETV\bin\Microsoft.AI.Web.xml
+F:\UETV_V2\UETV\UETV\bin\Microsoft.AI.WindowsServer.xml
+F:\UETV_V2\UETV\UETV\bin\Microsoft.ApplicationInsights.xml
+F:\UETV_V2\UETV\UETV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\UETV_V2\UETV\UETV\bin\MySql.Data.xml
+F:\UETV_V2\UETV\UETV\bin\MySql.Data.Entity.EF6.xml
+F:\UETV_V2\UETV\UETV\bin\Newtonsoft.Json.xml
+F:\UETV_V2\UETV\UETV\bin\System.Net.Http.Formatting.xml
+F:\UETV_V2\UETV\UETV\bin\System.Web.Http.xml
+F:\UETV_V2\UETV\UETV\bin\System.Web.Http.Cors.xml
+F:\UETV_V2\UETV\UETV\bin\System.Web.Http.WebHost.xml
+F:\UETV_V2\UETV\UETV\bin\System.Web.Optimization.xml
+F:\UETV_V2\UETV\UETV\bin\System.Web.Razor.xml
+F:\UETV_V2\UETV\UETV\bin\System.Web.Webpages.xml
+F:\UETV_V2\UETV\UETV\bin\System.Web.Webpages.Deployment.xml
+F:\UETV_V2\UETV\UETV\bin\System.Web.Webpages.Razor.xml
+F:\UETV_V2\UETV\UETV\bin\System.Web.Helpers.xml
+F:\UETV_V2\UETV\UETV\bin\System.Web.Mvc.xml
+F:\UETV_V2\UETV\UETV\obj\Debug\UETV.dll
+F:\UETV_V2\UETV\UETV\obj\Debug\UETV.pdb
+F:\UETV_V2\UETV\UETV\obj\Debug\UETV.csprojResolveAssemblyReference.cache
+F:\UETV_V2\Access Applications\UETV\UETV\bin\ApplicationInsights.config
+F:\UETV_V2\Access Applications\UETV\UETV\bin\roslyn\csc.exe
+F:\UETV_V2\Access Applications\UETV\UETV\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\UETV_V2\Access Applications\UETV\UETV\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\UETV_V2\Access Applications\UETV\UETV\bin\roslyn\System.Collections.Immutable.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\roslyn\System.Reflection.Metadata.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\roslyn\vbc.exe
+F:\UETV_V2\Access Applications\UETV\UETV\bin\roslyn\VBCSCompiler.exe
+F:\UETV_V2\Access Applications\UETV\UETV\bin\roslyn\VBCSCompiler.exe.config
+F:\UETV_V2\Access Applications\UETV\UETV\bin\UETV.dll.config
+F:\UETV_V2\Access Applications\UETV\UETV\bin\UETV.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\UETV.pdb
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Antlr3.Runtime.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\BarcodeLib.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\EntityFramework.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\EntityFramework.SqlServer.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\FromHeaderAttribute.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Microsoft.AI.Agent.Intercept.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Microsoft.AI.DependencyCollector.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Microsoft.AI.Web.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Microsoft.AI.WindowsServer.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Microsoft.ApplicationInsights.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Microsoft.Web.Infrastructure.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Newtonsoft.Json.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Swagger.Net.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Swashbuckle.Core.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Swashbuckle.Examples.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Net.Http.Formatting.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Cors.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Helpers.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Http.Cors.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Http.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Http.WebHost.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Mvc.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Optimization.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Razor.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Webpages.Deployment.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Webpages.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Webpages.Razor.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\WebGrease.dll
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Antlr3.Runtime.pdb
+F:\UETV_V2\Access Applications\UETV\UETV\bin\EntityFramework.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\EntityFramework.SqlServer.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Microsoft.AI.DependencyCollector.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Microsoft.AI.Web.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Microsoft.AI.WindowsServer.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Microsoft.ApplicationInsights.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\Newtonsoft.Json.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Net.Http.Formatting.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Http.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Http.Cors.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Http.WebHost.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Optimization.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Razor.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Webpages.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Webpages.Deployment.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Webpages.Razor.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Helpers.xml
+F:\UETV_V2\Access Applications\UETV\UETV\bin\System.Web.Mvc.xml
+F:\UETV_V2\Access Applications\UETV\UETV\obj\Debug\UETV.dll
+F:\UETV_V2\Access Applications\UETV\UETV\obj\Debug\UETV.pdb
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\ApplicationInsights.config
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\roslyn\csc.exe
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\roslyn\System.Collections.Immutable.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\roslyn\System.Reflection.Metadata.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\roslyn\vbc.exe
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\roslyn\VBCSCompiler.exe
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\roslyn\VBCSCompiler.exe.config
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\UETV.dll.config
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\UETV.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\UETV.pdb
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Antlr3.Runtime.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\BarcodeLib.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\EntityFramework.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\EntityFramework.SqlServer.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\FromHeaderAttribute.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Microsoft.AI.Agent.Intercept.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Microsoft.AI.DependencyCollector.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Microsoft.AI.Web.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Microsoft.AI.WindowsServer.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Microsoft.ApplicationInsights.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Microsoft.Web.Infrastructure.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Newtonsoft.Json.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Swagger.Net.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Swashbuckle.Core.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Swashbuckle.Examples.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Net.Http.Formatting.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Cors.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Helpers.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Http.Cors.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Http.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Http.WebHost.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Mvc.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Optimization.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Razor.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Webpages.Deployment.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Webpages.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Webpages.Razor.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\WebGrease.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Antlr3.Runtime.pdb
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\EntityFramework.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\EntityFramework.SqlServer.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Microsoft.AI.DependencyCollector.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Microsoft.AI.Web.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Microsoft.AI.WindowsServer.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Microsoft.ApplicationInsights.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\Newtonsoft.Json.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Net.Http.Formatting.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Http.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Http.Cors.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Http.WebHost.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Optimization.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Razor.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Webpages.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Webpages.Deployment.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Webpages.Razor.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Helpers.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\bin\System.Web.Mvc.xml
+F:\Access IOT Platform\Access Applications\UETV\UETV\obj\Debug\UETV.csprojResolveAssemblyReference.cache
+F:\Access IOT Platform\Access Applications\UETV\UETV\obj\Debug\UETV.dll
+F:\Access IOT Platform\Access Applications\UETV\UETV\obj\Debug\UETV.pdb
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\obj\Debug\UETV.csprojResolveAssemblyReference.cache
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\obj\Debug\UETV.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\obj\Debug\UETV.pdb
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\ApplicationInsights.config
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\roslyn\csc.exe
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\roslyn\vbc.exe
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\roslyn\VBCSCompiler.exe
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\UETV.dll.config
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\UETV.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\UETV.pdb
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Antlr3.Runtime.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\BarcodeLib.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\EntityFramework.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\EntityFramework.SqlServer.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\FromHeaderAttribute.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Microsoft.AI.Web.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Newtonsoft.Json.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Swagger.Net.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Swashbuckle.Core.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Swashbuckle.Examples.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Net.Http.Formatting.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Cors.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Helpers.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Http.Cors.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Http.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Http.WebHost.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Mvc.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Optimization.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Razor.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Webpages.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Webpages.Razor.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\WebGrease.dll
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Antlr3.Runtime.pdb
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\EntityFramework.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\EntityFramework.SqlServer.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Microsoft.AI.Web.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\Newtonsoft.Json.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Net.Http.Formatting.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Http.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Http.Cors.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Http.WebHost.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Optimization.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Razor.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Webpages.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Webpages.Razor.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Helpers.xml
+C:\Users\Abwhab\Desktop\ultrasonic\UETV\UETV\bin\System.Web.Mvc.xml

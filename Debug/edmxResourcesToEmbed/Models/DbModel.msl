@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="iotModelStoreContainer" CdmEntityContainer="iotEntities">
+    <EntitySetMapping Name="acc_sensor_analytics">
+      <EntityTypeMapping TypeName="iotModel.acc_sensor_analytics">
+        <MappingFragment StoreEntitySet="acc_sensor_analytics">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="creationTime" ColumnName="creationTime" />
+          <ScalarProperty Name="sensor_id" ColumnName="sensor_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_sensors">
+      <EntityTypeMapping TypeName="iotModel.acc_sensors">
+        <MappingFragment StoreEntitySet="acc_sensors">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lng" ColumnName="lng" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="max_value" ColumnName="max_value" />
+          <ScalarProperty Name="min_value" ColumnName="min_value" />
+          <ScalarProperty Name="lastValue" ColumnName="lastValue" />
+          <ScalarProperty Name="lastUpdateTime" ColumnName="lastUpdateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

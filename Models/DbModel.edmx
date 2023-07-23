@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="iotModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="acc_sensor_analytics">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="value" Type="double" Nullable="false" />
+          <Property Name="creationTime" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="sensor_id" Type="int" />
+        </EntityType>
+        <EntityType Name="acc_sensors">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="lng" Type="double" />
+          <Property Name="parent" Type="int" />
+          <Property Name="max_value" Type="int" />
+          <Property Name="min_value" Type="int" />
+          <Property Name="lastValue" Type="double" />
+          <Property Name="lastUpdateTime" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <Association Name="sens_Id">
+          <End Role="acc_sensors" Type="Self.acc_sensors" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="acc_sensor_analytics" Type="Self.acc_sensor_analytics" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="acc_sensors">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="acc_sensor_analytics">
+              <PropertyRef Name="sensor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="iotModelStoreContainer">
+          <EntitySet Name="acc_sensor_analytics" EntityType="Self.acc_sensor_analytics" Schema="iot" store:Type="Tables" />
+          <EntitySet Name="acc_sensors" EntityType="Self.acc_sensors" Schema="iot" store:Type="Tables" />
+          <AssociationSet Name="sens_Id" Association="Self.sens_Id">
+            <End Role="acc_sensors" EntitySet="acc_sensors" />
+            <End Role="acc_sensor_analytics" EntitySet="acc_sensor_analytics" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="iotModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="acc_sensor_analytics">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="value" Type="Double" Nullable="false" />
+          <Property Name="creationTime" Type="DateTime" Nullable="false" />
+          <Property Name="sensor_id" Type="Int32" />
+          <NavigationProperty Name="acc_sensors" Relationship="Self.sens_Id" FromRole="acc_sensor_analytics" ToRole="acc_sensors" />
+        </EntityType>
+        <EntityType Name="acc_sensors">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lng" Type="Double" />
+          <Property Name="parent" Type="Int32" />
+          <Property Name="max_value" Type="Int32" />
+          <Property Name="min_value" Type="Int32" />
+          <Property Name="lastValue" Type="Double" />
+          <Property Name="lastUpdateTime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="acc_sensor_analytics" Relationship="Self.sens_Id" FromRole="acc_sensors" ToRole="acc_sensor_analytics" />
+        </EntityType>
+        <Association Name="sens_Id">
+          <End Role="acc_sensors" Type="Self.acc_sensors" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="acc_sensor_analytics" Type="Self.acc_sensor_analytics" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="acc_sensors">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="acc_sensor_analytics">
+              <PropertyRef Name="sensor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="iotEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="acc_sensor_analytics" EntityType="Self.acc_sensor_analytics" />
+          <EntitySet Name="acc_sensors" EntityType="Self.acc_sensors" />
+          <AssociationSet Name="sens_Id" Association="Self.sens_Id">
+            <End Role="acc_sensors" EntitySet="acc_sensors" />
+            <End Role="acc_sensor_analytics" EntitySet="acc_sensor_analytics" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="iotModelStoreContainer" CdmEntityContainer="iotEntities">
+          <EntitySetMapping Name="acc_sensor_analytics">
+            <EntityTypeMapping TypeName="iotModel.acc_sensor_analytics">
+              <MappingFragment StoreEntitySet="acc_sensor_analytics">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="creationTime" ColumnName="creationTime" />
+                <ScalarProperty Name="sensor_id" ColumnName="sensor_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="acc_sensors">
+            <EntityTypeMapping TypeName="iotModel.acc_sensors">
+              <MappingFragment StoreEntitySet="acc_sensors">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="lng" ColumnName="lng" />
+                <ScalarProperty Name="parent" ColumnName="parent" />
+                <ScalarProperty Name="max_value" ColumnName="max_value" />
+                <ScalarProperty Name="min_value" ColumnName="min_value" />
+                <ScalarProperty Name="lastValue" ColumnName="lastValue" />
+                <ScalarProperty Name="lastUpdateTime" ColumnName="lastUpdateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

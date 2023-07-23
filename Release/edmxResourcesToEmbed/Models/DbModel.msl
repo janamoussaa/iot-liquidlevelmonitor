@@ -1,0 +1,834 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ahmedModelStoreContainer" CdmEntityContainer="ahmedEntities">
+    <EntitySetMapping Name="acc_admin_log">
+      <EntityTypeMapping TypeName="ahmedModel.acc_admin_log">
+        <MappingFragment StoreEntitySet="acc_admin_log">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="event" ColumnName="event" />
+          <ScalarProperty Name="datetime" ColumnName="datetime" />
+          <ScalarProperty Name="table" ColumnName="table" />
+          <ScalarProperty Name="row_id" ColumnName="row_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_aicameraanalytics">
+      <EntityTypeMapping TypeName="ahmedModel.acc_aicameraanalytics">
+        <MappingFragment StoreEntitySet="acc_aicameraanalytics">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cameraId" ColumnName="cameraId" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="creationTime" ColumnName="creationTime" />
+          <ScalarProperty Name="candidateSex" ColumnName="candidateSex" />
+          <ScalarProperty Name="candidateName" ColumnName="candidateName" />
+          <ScalarProperty Name="candidateDOB" ColumnName="candidateDOB" />
+          <ScalarProperty Name="candaidateId" ColumnName="candaidateId" />
+          <ScalarProperty Name="candidateSimilarityPerson" ColumnName="candidateSimilarityPerson" />
+          <ScalarProperty Name="strangerId" ColumnName="strangerId" />
+          <ScalarProperty Name="candidateImage" ColumnName="candidateImage" />
+          <ScalarProperty Name="FromAccess" ColumnName="FromAccess" />
+          <ScalarProperty Name="CreationTimeStamp" ColumnName="CreationTimeStamp" />
+          <ScalarProperty Name="employeeId" ColumnName="employeeId" />
+          <ScalarProperty Name="doorStatus" ColumnName="doorStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_alerts">
+      <EntityTypeMapping TypeName="ahmedModel.acc_alerts">
+        <MappingFragment StoreEntitySet="acc_alerts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="alertSource" ColumnName="alertSource" />
+          <ScalarProperty Name="deviceId" ColumnName="deviceId" />
+          <ScalarProperty Name="isSent" ColumnName="isSent" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="lat" ColumnName="lat" />
+          <ScalarProperty Name="lng" ColumnName="lng" />
+          <ScalarProperty Name="CreationTimeStamp" ColumnName="CreationTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_area">
+      <EntityTypeMapping TypeName="ahmedModel.acc_area">
+        <MappingFragment StoreEntitySet="acc_area">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="basemap" ColumnName="basemap" />
+          <ScalarProperty Name="lat" ColumnName="lat" />
+          <ScalarProperty Name="lng" ColumnName="lng" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_assign_emp_access">
+      <EntityTypeMapping TypeName="ahmedModel.acc_assign_emp_access">
+        <MappingFragment StoreEntitySet="acc_assign_emp_access">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="emp_name" ColumnName="emp_name" />
+          <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+          <ScalarProperty Name="emp_id_no" ColumnName="emp_id_no" />
+          <ScalarProperty Name="emp_cardno" ColumnName="emp_cardno" />
+          <ScalarProperty Name="emp_password" ColumnName="emp_password" />
+          <ScalarProperty Name="emp_pic" ColumnName="emp_pic" />
+          <ScalarProperty Name="device_ip" ColumnName="device_ip" />
+          <ScalarProperty Name="device_id" ColumnName="device_id" />
+          <ScalarProperty Name="device_username" ColumnName="device_username" />
+          <ScalarProperty Name="device_password" ColumnName="device_password" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="userstatus" ColumnName="userstatus" />
+          <ScalarProperty Name="picstatus" ColumnName="picstatus" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="valid" ColumnName="valid" />
+          <ScalarProperty Name="operation" ColumnName="operation" />
+          <ScalarProperty Name="error" ColumnName="error" />
+          <ScalarProperty Name="isVisitor" ColumnName="isVisitor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_basemaps">
+      <EntityTypeMapping TypeName="ahmedModel.acc_basemaps">
+        <MappingFragment StoreEntitySet="acc_basemaps">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_cameras_records">
+      <EntityTypeMapping TypeName="ahmedModel.acc_cameras_records">
+        <MappingFragment StoreEntitySet="acc_cameras_records">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="camera_id" ColumnName="camera_id" />
+          <ScalarProperty Name="startTime" ColumnName="startTime" />
+          <ScalarProperty Name="endTime" ColumnName="endTime" />
+          <ScalarProperty Name="recordHttpURL" ColumnName="recordHttpURL" />
+          <ScalarProperty Name="recordFtpURL" ColumnName="recordFtpURL" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="sizeInGiga" ColumnName="sizeInGiga" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_collect_data">
+      <EntityTypeMapping TypeName="ahmedModel.acc_collect_data">
+        <MappingFragment StoreEntitySet="acc_collect_data">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="gatewayId" ColumnName="gatewayId" />
+          <ScalarProperty Name="parentId" ColumnName="parentId" />
+          <ScalarProperty Name="siteId" ColumnName="siteId" />
+          <ScalarProperty Name="creationTime" ColumnName="creationTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_dashboard">
+      <EntityTypeMapping TypeName="ahmedModel.acc_dashboard">
+        <MappingFragment StoreEntitySet="acc_dashboard">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="index" ColumnName="index" />
+          <ScalarProperty Name="parentId" ColumnName="parentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_dashboard_contents">
+      <EntityTypeMapping TypeName="ahmedModel.acc_dashboard_contents">
+        <MappingFragment StoreEntitySet="acc_dashboard_contents">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="index" ColumnName="index" />
+          <ScalarProperty Name="parentId" ColumnName="parentId" />
+          <ScalarProperty Name="dashboardId" ColumnName="dashboardId" />
+          <ScalarProperty Name="contentType" ColumnName="contentType" />
+          <ScalarProperty Name="areaId" ColumnName="areaId" />
+          <ScalarProperty Name="floorId" ColumnName="floorId" />
+          <ScalarProperty Name="elementData" ColumnName="elementData" />
+          <ScalarProperty Name="sensorId" ColumnName="sensorId" />
+          <ScalarProperty Name="sensorKeyId" ColumnName="sensorKeyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_device_type">
+      <EntityTypeMapping TypeName="ahmedModel.acc_device_type">
+        <MappingFragment StoreEntitySet="acc_device_type">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="device_type" ColumnName="device_type" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_devices">
+      <EntityTypeMapping TypeName="ahmedModel.acc_devices">
+        <MappingFragment StoreEntitySet="acc_devices">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="device_ip" ColumnName="device_ip" />
+          <ScalarProperty Name="device_type" ColumnName="device_type" />
+          <ScalarProperty Name="device_model" ColumnName="device_model" />
+          <ScalarProperty Name="area_id" ColumnName="area_id" />
+          <ScalarProperty Name="floor_id" ColumnName="floor_id" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="lat" ColumnName="lat" />
+          <ScalarProperty Name="lng" ColumnName="lng" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="information" ColumnName="information" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="serial_number" ColumnName="serial_number" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="door_name" ColumnName="door_name" />
+          <ScalarProperty Name="fps" ColumnName="fps" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="rtsp_link" ColumnName="rtsp_link" />
+          <ScalarProperty Name="channelsNumber" ColumnName="channelsNumber" />
+          <ScalarProperty Name="enableAutomaticRecording" ColumnName="enableAutomaticRecording" />
+          <ScalarProperty Name="supportOnVif" ColumnName="supportOnVif" />
+          <ScalarProperty Name="portNumber" ColumnName="portNumber" />
+          <ScalarProperty Name="isAiCamera" ColumnName="isAiCamera" />
+          <ScalarProperty Name="cameraImage" ColumnName="cameraImage" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="gateway_output" ColumnName="gateway_output" />
+          <ScalarProperty Name="gateway_inputs" ColumnName="gateway_inputs" />
+          <ScalarProperty Name="traffic_status" ColumnName="traffic_status" />
+          <ScalarProperty Name="weather_wind" ColumnName="weather_wind" />
+          <ScalarProperty Name="weather_waves" ColumnName="weather_waves" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_doors">
+      <EntityTypeMapping TypeName="ahmedModel.acc_doors">
+        <MappingFragment StoreEntitySet="acc_doors">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="device_id" ColumnName="device_id" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="door_status" ColumnName="door_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_emp_department">
+      <EntityTypeMapping TypeName="ahmedModel.acc_emp_department">
+        <MappingFragment StoreEntitySet="acc_emp_department">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_emp_type">
+      <EntityTypeMapping TypeName="ahmedModel.acc_emp_type">
+        <MappingFragment StoreEntitySet="acc_emp_type">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="emp_type" ColumnName="emp_type" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_employee">
+      <EntityTypeMapping TypeName="ahmedModel.acc_employee">
+        <MappingFragment StoreEntitySet="acc_employee">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="emp_type" ColumnName="emp_type" />
+          <ScalarProperty Name="id_no" ColumnName="id_no" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="emp_pic" ColumnName="emp_pic" />
+          <ScalarProperty Name="phone1" ColumnName="phone1" />
+          <ScalarProperty Name="phone2" ColumnName="phone2" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="valid" ColumnName="valid" />
+          <ScalarProperty Name="card" ColumnName="card" />
+          <ScalarProperty Name="face_id" ColumnName="face_id" />
+          <ScalarProperty Name="id_pic" ColumnName="id_pic" />
+          <ScalarProperty Name="creation_time" ColumnName="creation_time" />
+          <ScalarProperty Name="information" ColumnName="information" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="machine_recno" ColumnName="machine_recno" />
+          <ScalarProperty Name="role" ColumnName="role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_event_exced">
+      <EntityTypeMapping TypeName="ahmedModel.acc_event_exced">
+        <MappingFragment StoreEntitySet="acc_event_exced">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="event_name" ColumnName="event_name" />
+          <ScalarProperty Name="event_id" ColumnName="event_id" />
+          <ScalarProperty Name="acutal_value" ColumnName="acutal_value" />
+          <ScalarProperty Name="operator" ColumnName="operator" />
+          <ScalarProperty Name="condition_value" ColumnName="condition_value" />
+          <ScalarProperty Name="sensor_id" ColumnName="sensor_id" />
+          <ScalarProperty Name="sensor_name" ColumnName="sensor_name" />
+          <ScalarProperty Name="sensor_mac" ColumnName="sensor_mac" />
+          <ScalarProperty Name="gateway_name" ColumnName="gateway_name" />
+          <ScalarProperty Name="gateway_id" ColumnName="gateway_id" />
+          <ScalarProperty Name="gateway_output" ColumnName="gateway_output" />
+          <ScalarProperty Name="gateway_output_type" ColumnName="gateway_output_type" />
+          <ScalarProperty Name="gateway_output_delay" ColumnName="gateway_output_delay" />
+          <ScalarProperty Name="gateway_output_time" ColumnName="gateway_output_time" />
+          <ScalarProperty Name="creation_time" ColumnName="creation_time" />
+          <ScalarProperty Name="alert" ColumnName="alert" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_floor">
+      <EntityTypeMapping TypeName="ahmedModel.acc_floor">
+        <MappingFragment StoreEntitySet="acc_floor">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="area_id" ColumnName="area_id" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="layer" ColumnName="layer" />
+          <ScalarProperty Name="layer_url" ColumnName="layer_url" />
+          <ScalarProperty Name="subarea_id" ColumnName="subarea_id" />
+          <ScalarProperty Name="lat" ColumnName="lat" />
+          <ScalarProperty Name="lng" ColumnName="lng" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_gefence">
+      <EntityTypeMapping TypeName="ahmedModel.acc_gefence">
+        <MappingFragment StoreEntitySet="acc_gefence">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="polylineName" ColumnName="polylineName" />
+          <ScalarProperty Name="RoutePoints" ColumnName="RoutePoints" />
+          <ScalarProperty Name="areaID" ColumnName="areaID" />
+          <ScalarProperty Name="floorID" ColumnName="floorID" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="gefenceType" ColumnName="gefenceType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_integration">
+      <EntityTypeMapping TypeName="ahmedModel.acc_integration">
+        <MappingFragment StoreEntitySet="acc_integration">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="host" ColumnName="host" />
+          <ScalarProperty Name="json" ColumnName="json" />
+          <ScalarProperty Name="customheaders" ColumnName="customheaders" />
+          <ScalarProperty Name="enable" ColumnName="enable" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_machine">
+      <EntityTypeMapping TypeName="ahmedModel.acc_machine">
+        <MappingFragment StoreEntitySet="acc_machine">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="machineName" ColumnName="machineName" />
+          <ScalarProperty Name="areaId" ColumnName="areaId" />
+          <ScalarProperty Name="floorId" ColumnName="floorId" />
+          <ScalarProperty Name="lat" ColumnName="lat" />
+          <ScalarProperty Name="lng" ColumnName="lng" />
+          <ScalarProperty Name="creatorId" ColumnName="creatorId" />
+          <ScalarProperty Name="creationTime" ColumnName="creationTime" />
+          <ScalarProperty Name="parentId" ColumnName="parentId" />
+          <ScalarProperty Name="deviceId" ColumnName="deviceId" />
+          <ScalarProperty Name="machineImage" ColumnName="machineImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_mail_server_configuration">
+      <EntityTypeMapping TypeName="ahmedModel.acc_mail_server_configuration">
+        <MappingFragment StoreEntitySet="acc_mail_server_configuration">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="emailServer" ColumnName="emailServer" />
+          <ScalarProperty Name="senderMailAddress" ColumnName="senderMailAddress" />
+          <ScalarProperty Name="senderMailPassword" ColumnName="senderMailPassword" />
+          <ScalarProperty Name="enableSSL" ColumnName="enableSSL" />
+          <ScalarProperty Name="creatorId" ColumnName="creatorId" />
+          <ScalarProperty Name="creationTime" ColumnName="creationTime" />
+          <ScalarProperty Name="portNumber" ColumnName="portNumber" />
+          <ScalarProperty Name="mailBody" ColumnName="mailBody" />
+          <ScalarProperty Name="mailSubject" ColumnName="mailSubject" />
+          <ScalarProperty Name="parentId" ColumnName="parentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_role_of_sensors">
+      <EntityTypeMapping TypeName="ahmedModel.acc_role_of_sensors">
+        <MappingFragment StoreEntitySet="acc_role_of_sensors">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="creatorId" ColumnName="creatorId" />
+          <ScalarProperty Name="creationTime" ColumnName="creationTime" />
+          <ScalarProperty Name="parentId" ColumnName="parentId" />
+          <ScalarProperty Name="alertableValue" ColumnName="alertableValue" />
+          <ScalarProperty Name="actionedValue" ColumnName="actionedValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_roles">
+      <EntityTypeMapping TypeName="ahmedModel.acc_roles">
+        <MappingFragment StoreEntitySet="acc_roles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="areas" ColumnName="areas" />
+          <ScalarProperty Name="floors" ColumnName="floors" />
+          <ScalarProperty Name="devices" ColumnName="devices" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_scenarios">
+      <EntityTypeMapping TypeName="ahmedModel.acc_scenarios">
+        <MappingFragment StoreEntitySet="acc_scenarios">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="target_sensor" ColumnName="target_sensor" />
+          <ScalarProperty Name="operate" ColumnName="operate" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="action_gateway" ColumnName="action_gateway" />
+          <ScalarProperty Name="gateway_output" ColumnName="gateway_output" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="alert" ColumnName="alert" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="delay" ColumnName="delay" />
+          <ScalarProperty Name="integration_id" ColumnName="integration_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_sensor_analytics">
+      <EntityTypeMapping TypeName="ahmedModel.acc_sensor_analytics">
+        <MappingFragment StoreEntitySet="acc_sensor_analytics">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sensorId" ColumnName="sensorId" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="creationTime" ColumnName="creationTime" />
+          <ScalarProperty Name="mac_address" ColumnName="mac_address" />
+          <ScalarProperty Name="sensor_id" ColumnName="sensor_id" />
+          <ScalarProperty Name="sensor_key_id" ColumnName="sensor_key_id" />
+          <ScalarProperty Name="gateway_input" ColumnName="gateway_input" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_sensor_analytics_dummy_data">
+      <EntityTypeMapping TypeName="ahmedModel.acc_sensor_analytics_dummy_data">
+        <MappingFragment StoreEntitySet="acc_sensor_analytics_dummy_data">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sensorId" ColumnName="sensorId" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="isAlertable" ColumnName="isAlertable" />
+          <ScalarProperty Name="creationTime" ColumnName="creationTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_sensor_roles">
+      <EntityTypeMapping TypeName="ahmedModel.acc_sensor_roles">
+        <MappingFragment StoreEntitySet="acc_sensor_roles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sensorId" ColumnName="sensorId" />
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_sensor_types">
+      <EntityTypeMapping TypeName="ahmedModel.acc_sensor_types">
+        <MappingFragment StoreEntitySet="acc_sensor_types">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ar_name" ColumnName="ar_name" />
+          <ScalarProperty Name="en_name" ColumnName="en_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_sensor_types_keys">
+      <EntityTypeMapping TypeName="ahmedModel.acc_sensor_types_keys">
+        <MappingFragment StoreEntitySet="acc_sensor_types_keys">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ar_name" ColumnName="ar_name" />
+          <ScalarProperty Name="en_name" ColumnName="en_name" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="unit" ColumnName="unit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_sensor_widget_content">
+      <EntityTypeMapping TypeName="ahmedModel.acc_sensor_widget_content">
+        <MappingFragment StoreEntitySet="acc_sensor_widget_content">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="index" ColumnName="index" />
+          <ScalarProperty Name="parentId" ColumnName="parentId" />
+          <ScalarProperty Name="sensorWidgetId" ColumnName="sensorWidgetId" />
+          <ScalarProperty Name="widgetType" ColumnName="widgetType" />
+          <ScalarProperty Name="sensorId" ColumnName="sensorId" />
+          <ScalarProperty Name="sensorKeyId" ColumnName="sensorKeyId" />
+          <ScalarProperty Name="areaId" ColumnName="areaId" />
+          <ScalarProperty Name="floorId" ColumnName="floorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_sensor_widgets">
+      <EntityTypeMapping TypeName="ahmedModel.acc_sensor_widgets">
+        <MappingFragment StoreEntitySet="acc_sensor_widgets">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="index" ColumnName="index" />
+          <ScalarProperty Name="parentId" ColumnName="parentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_sensors">
+      <EntityTypeMapping TypeName="ahmedModel.acc_sensors">
+        <MappingFragment StoreEntitySet="acc_sensors">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="creatorId" ColumnName="creatorId" />
+          <ScalarProperty Name="creationTime" ColumnName="creationTime" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="areaId" ColumnName="areaId" />
+          <ScalarProperty Name="floorId" ColumnName="floorId" />
+          <ScalarProperty Name="lat" ColumnName="lat" />
+          <ScalarProperty Name="lng" ColumnName="lng" />
+          <ScalarProperty Name="macAddress" ColumnName="macAddress" />
+          <ScalarProperty Name="deviceId" ColumnName="deviceId" />
+          <ScalarProperty Name="machineId" ColumnName="machineId" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="normal_value" ColumnName="normal_value" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="last_update" ColumnName="last_update" />
+          <ScalarProperty Name="alert" ColumnName="alert" />
+          <ScalarProperty Name="sensor_type" ColumnName="sensor_type" />
+          <ScalarProperty Name="gateway_input" ColumnName="gateway_input" />
+          <ScalarProperty Name="max_value" ColumnName="max_value" />
+          <ScalarProperty Name="max_value_alerting" ColumnName="max_value_alerting" />
+          <ScalarProperty Name="min_value" ColumnName="min_value" />
+          <ScalarProperty Name="min_value_alerting" ColumnName="min_value_alerting" />
+          <ScalarProperty Name="critical_max_value" ColumnName="critical_max_value" />
+          <ScalarProperty Name="critical_max_value_alerting" ColumnName="critical_max_value_alerting" />
+          <ScalarProperty Name="critical_min_value" ColumnName="critical_min_value" />
+          <ScalarProperty Name="critical_min_value_alerting" ColumnName="critical_min_value_alerting" />
+          <ScalarProperty Name="sensor_model" ColumnName="sensor_model" />
+          <ScalarProperty Name="voltage_type" ColumnName="voltage_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_sensors_key">
+      <EntityTypeMapping TypeName="ahmedModel.acc_sensors_key">
+        <MappingFragment StoreEntitySet="acc_sensors_key">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sensor_id" ColumnName="sensor_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="max_value" ColumnName="max_value" />
+          <ScalarProperty Name="max_value_alerting" ColumnName="max_value_alerting" />
+          <ScalarProperty Name="min_value" ColumnName="min_value" />
+          <ScalarProperty Name="min_value_alerting" ColumnName="min_value_alerting" />
+          <ScalarProperty Name="critical_max_value" ColumnName="critical_max_value" />
+          <ScalarProperty Name="critical_max_value_alerting" ColumnName="critical_max_value_alerting" />
+          <ScalarProperty Name="critical_min_value" ColumnName="critical_min_value" />
+          <ScalarProperty Name="critical_min_value_alerting" ColumnName="critical_min_value_alerting" />
+          <ScalarProperty Name="last_value" ColumnName="last_value" />
+          <ScalarProperty Name="last_update" ColumnName="last_update" />
+          <ScalarProperty Name="gateway_id" ColumnName="gateway_id" />
+          <ScalarProperty Name="gateway_input" ColumnName="gateway_input" />
+          <ScalarProperty Name="water_level_position" ColumnName="water_level_position" />
+          <ScalarProperty Name="sensor_type_key_id" ColumnName="sensor_type_key_id" />
+          <ScalarProperty Name="sensor_key" ColumnName="sensor_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_strangers">
+      <EntityTypeMapping TypeName="ahmedModel.acc_strangers">
+        <MappingFragment StoreEntitySet="acc_strangers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="stangerImage" ColumnName="stangerImage" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="strangerSex" ColumnName="strangerSex" />
+          <ScalarProperty Name="starngerAge" ColumnName="starngerAge" />
+          <ScalarProperty Name="starngerSkinColor" ColumnName="starngerSkinColor" />
+          <ScalarProperty Name="starngerEye" ColumnName="starngerEye" />
+          <ScalarProperty Name="starngerMouth" ColumnName="starngerMouth" />
+          <ScalarProperty Name="starngerMask" ColumnName="starngerMask" />
+          <ScalarProperty Name="starngerBeard" ColumnName="starngerBeard" />
+          <ScalarProperty Name="starngerFaceQuality" ColumnName="starngerFaceQuality" />
+          <ScalarProperty Name="cameraId" ColumnName="cameraId" />
+          <ScalarProperty Name="FromAccess" ColumnName="FromAccess" />
+          <ScalarProperty Name="CreationTimeStamp" ColumnName="CreationTimeStamp" />
+          <ScalarProperty Name="doorStatus" ColumnName="doorStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_subarea">
+      <EntityTypeMapping TypeName="ahmedModel.acc_subarea">
+        <MappingFragment StoreEntitySet="acc_subarea">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="area_id" ColumnName="area_id" />
+          <ScalarProperty Name="lat" ColumnName="lat" />
+          <ScalarProperty Name="lng" ColumnName="lng" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_uetv_credentials">
+      <EntityTypeMapping TypeName="ahmedModel.acc_uetv_credentials">
+        <MappingFragment StoreEntitySet="acc_uetv_credentials">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ftp_server" ColumnName="ftp_server" />
+          <ScalarProperty Name="ftp_server_user_name" ColumnName="ftp_server_user_name" />
+          <ScalarProperty Name="ftp_server_password" ColumnName="ftp_server_password" />
+          <ScalarProperty Name="ftp_port" ColumnName="ftp_port" />
+          <ScalarProperty Name="ftp_server_get" ColumnName="ftp_server_get" />
+          <ScalarProperty Name="parentId" ColumnName="parentId" />
+          <ScalarProperty Name="UsedSpacePercentAlerting" ColumnName="UsedSpacePercentAlerting" />
+          <ScalarProperty Name="FirstInFirstOutDeletionMode" ColumnName="FirstInFirstOutDeletionMode" />
+          <ScalarProperty Name="AlertingOnly" ColumnName="AlertingOnly" />
+          <ScalarProperty Name="ftpStorageInGiga" ColumnName="ftpStorageInGiga" />
+          <ScalarProperty Name="dir" ColumnName="dir" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_visitor">
+      <EntityTypeMapping TypeName="ahmedModel.acc_visitor">
+        <MappingFragment StoreEntitySet="acc_visitor">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id_no" ColumnName="id_no" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="id_pic" ColumnName="id_pic" />
+          <ScalarProperty Name="pic" ColumnName="pic" />
+          <ScalarProperty Name="parentId" ColumnName="parentId" />
+          <ScalarProperty Name="visitId" ColumnName="visitId" />
+          <ScalarProperty Name="creatorId" ColumnName="creatorId" />
+          <ScalarProperty Name="creationTime" ColumnName="creationTime" />
+          <ScalarProperty Name="visitorMail" ColumnName="visitorMail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_visits">
+      <EntityTypeMapping TypeName="ahmedModel.acc_visits">
+        <MappingFragment StoreEntitySet="acc_visits">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="visitPurpose" ColumnName="visitPurpose" />
+          <ScalarProperty Name="visitStart" ColumnName="visitStart" />
+          <ScalarProperty Name="visitEnd" ColumnName="visitEnd" />
+          <ScalarProperty Name="visitCode" ColumnName="visitCode" />
+          <ScalarProperty Name="parentId" ColumnName="parentId" />
+          <ScalarProperty Name="employeeId" ColumnName="employeeId" />
+          <ScalarProperty Name="creatorId" ColumnName="creatorId" />
+          <ScalarProperty Name="creationTime" ColumnName="creationTime" />
+          <ScalarProperty Name="isApproved" ColumnName="isApproved" />
+          <ScalarProperty Name="isAtteneded" ColumnName="isAtteneded" />
+          <ScalarProperty Name="checkOutTime" ColumnName="checkOutTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_zone">
+      <EntityTypeMapping TypeName="ahmedModel.acc_zone">
+        <MappingFragment StoreEntitySet="acc_zone">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lat" ColumnName="lat" />
+          <ScalarProperty Name="lng" ColumnName="lng" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="area_id" ColumnName="area_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="ahmedModel.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="device_limit" ColumnName="device_limit" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="parentID" ColumnName="parentID" />
+          <ScalarProperty Name="time_zone" ColumnName="time_zone" />
+          <ScalarProperty Name="invoice_sum" ColumnName="invoice_sum" />
+          <ScalarProperty Name="add_client" ColumnName="add_client" />
+          <ScalarProperty Name="client_total" ColumnName="client_total" />
+          <ScalarProperty Name="token" ColumnName="token" />
+          <ScalarProperty Name="mobile_token" ColumnName="mobile_token" />
+          <ScalarProperty Name="customer_invoices" ColumnName="customer_invoices" />
+          <ScalarProperty Name="safe" ColumnName="safe" />
+          <ScalarProperty Name="request" ColumnName="request" />
+          <ScalarProperty Name="bank" ColumnName="bank" />
+          <ScalarProperty Name="regestration" ColumnName="regestration" />
+          <ScalarProperty Name="file_uploads" ColumnName="file_uploads" />
+          <ScalarProperty Name="relation_item" ColumnName="relation_item" />
+          <ScalarProperty Name="relation_areas" ColumnName="relation_areas" />
+          <ScalarProperty Name="relation_visiablity" ColumnName="relation_visiablity" />
+          <ScalarProperty Name="relation_compition" ColumnName="relation_compition" />
+          <ScalarProperty Name="sos_ml" ColumnName="sos_ml" />
+          <ScalarProperty Name="number_classes" ColumnName="number_classes" />
+          <ScalarProperty Name="last_access" ColumnName="last_access" />
+          <ScalarProperty Name="acc_valid" ColumnName="acc_valid" />
+          <ScalarProperty Name="acc_lastlogin" ColumnName="acc_lastlogin" />
+          <ScalarProperty Name="acc_token" ColumnName="acc_token" />
+          <ScalarProperty Name="acc_token_expire" ColumnName="acc_token_expire" />
+          <ScalarProperty Name="acc_ftp_id" ColumnName="acc_ftp_id" />
+          <ScalarProperty Name="acc_ftp_dir" ColumnName="acc_ftp_dir" />
+          <ScalarProperty Name="acc_is_online" ColumnName="acc_is_online" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="compls">
+      <EntityTypeMapping TypeName="ahmedModel.compls">
+        <MappingFragment StoreEntitySet="compls">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="vechileId" ColumnName="vechileId" />
+          <ScalarProperty Name="DriverId" ColumnName="DriverId" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="checked" ColumnName="checked" />
+          <ScalarProperty Name="WorkOrdered" ColumnName="WorkOrdered" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="edusecstdnumb">
+      <EntityTypeMapping TypeName="ahmedModel.edusecstdnumb">
+        <MappingFragment StoreEntitySet="edusecstdnumb">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="StdSchoolId" ColumnName="StdSchoolId" />
+          <ScalarProperty Name="Count_Std_Id_" ColumnName="Count(Std.Id)" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fleet_rpts">
+      <EntityTypeMapping TypeName="ahmedModel.fleet_rpts">
+        <MappingFragment StoreEntitySet="fleet_rpts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ReportDescription" ColumnName="ReportDescription" />
+          <ScalarProperty Name="vechileId" ColumnName="vechileId" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="ModifierId" ColumnName="ModifierId" />
+          <ScalarProperty Name="ModificationTime" ColumnName="ModificationTime" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="getftpdirectortforsensor">
+      <EntityTypeMapping TypeName="ahmedModel.getftpdirectortforsensor">
+        <MappingFragment StoreEntitySet="getftpdirectortforsensor">
+          <ScalarProperty Name="dir" ColumnName="dir" />
+          <ScalarProperty Name="acc_ftp_dir" ColumnName="acc_ftp_dir" />
+          <ScalarProperty Name="usId" ColumnName="usId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="device_ip" ColumnName="device_ip" />
+          <ScalarProperty Name="rtsp_link" ColumnName="rtsp_link" />
+          <ScalarProperty Name="ftp_server" ColumnName="ftp_server" />
+          <ScalarProperty Name="ftp_server_get" ColumnName="ftp_server_get" />
+          <ScalarProperty Name="ftp_server_user_name" ColumnName="ftp_server_user_name" />
+          <ScalarProperty Name="ftp_port" ColumnName="ftp_port" />
+          <ScalarProperty Name="ftp_server_password" ColumnName="ftp_server_password" />
+          <ScalarProperty Name="ftpStorageInGiga" ColumnName="ftpStorageInGiga" />
+          <ScalarProperty Name="UsedSpacePercentAlerting" ColumnName="UsedSpacePercentAlerting" />
+          <ScalarProperty Name="FirstInFirstOutDeletionMode" ColumnName="FirstInFirstOutDeletionMode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="invalidmainstockitemquan">
+      <EntityTypeMapping TypeName="ahmedModel.invalidmainstockitemquan">
+        <MappingFragment StoreEntitySet="invalidmainstockitemquan">
+          <ScalarProperty Name="mainStockId" ColumnName="mainStockId" />
+          <ScalarProperty Name="mainStockName" ColumnName="mainStockName" />
+          <ScalarProperty Name="itemId" ColumnName="itemId" />
+          <ScalarProperty Name="itemName" ColumnName="itemName" />
+          <ScalarProperty Name="itemBalancePoint" ColumnName="itemBalancePoint" />
+          <ScalarProperty Name="itemRequestLimit" ColumnName="itemRequestLimit" />
+          <ScalarProperty Name="itemQuantityInStock" ColumnName="itemQuantityInStock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="invalidsubstockitemquan">
+      <EntityTypeMapping TypeName="ahmedModel.invalidsubstockitemquan">
+        <MappingFragment StoreEntitySet="invalidsubstockitemquan">
+          <ScalarProperty Name="subStockId" ColumnName="subStockId" />
+          <ScalarProperty Name="subStockName" ColumnName="subStockName" />
+          <ScalarProperty Name="itemId" ColumnName="itemId" />
+          <ScalarProperty Name="itemName" ColumnName="itemName" />
+          <ScalarProperty Name="itemBalancePoint" ColumnName="itemBalancePoint" />
+          <ScalarProperty Name="itemRequestLimit" ColumnName="itemRequestLimit" />
+          <ScalarProperty Name="itemQuantityInStock" ColumnName="itemQuantityInStock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="schoolusers">
+      <EntityTypeMapping TypeName="ahmedModel.schoolusers">
+        <MappingFragment StoreEntitySet="schoolusers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="alarm_distance" ColumnName="alarm_distance" />
+          <ScalarProperty Name="alarm_speed" ColumnName="alarm_speed" />
+          <ScalarProperty Name="alarm_geofence" ColumnName="alarm_geofence" />
+          <ScalarProperty Name="alarm_alarm" ColumnName="alarm_alarm" />
+          <ScalarProperty Name="expire" ColumnName="expire" />
+          <ScalarProperty Name="valid" ColumnName="valid" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="limit" ColumnName="limit" />
+          <ScalarProperty Name="admin_valid" ColumnName="admin_valid" />
+          <ScalarProperty Name="whats_app_number" ColumnName="whats_app_number" />
+          <ScalarProperty Name="time_zone" ColumnName="time_zone" />
+          <ScalarProperty Name="IsParent" ColumnName="IsParent" />
+          <ScalarProperty Name="IsTeacher" ColumnName="IsTeacher" />
+          <ScalarProperty Name="IsStudent" ColumnName="IsStudent" />
+          <ScalarProperty Name="IsDriver" ColumnName="IsDriver" />
+          <ScalarProperty Name="IsEmployee" ColumnName="IsEmployee" />
+          <ScalarProperty Name="serial" ColumnName="serial" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetEventsBieLabelData" FunctionName="ahmedModel.Store.GetEventsBieLabelData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ahmedModel.GetEventsBieLabelData_Result" />
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSensorsAnalyticsData" FunctionName="ahmedModel.Store.GetSensorsAnalyticsData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ahmedModel.GetSensorsAnalyticsData_Result" />
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSensorsTableDataProcedure" FunctionName="ahmedModel.Store.GetSensorsTableDataProcedure">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ahmedModel.GetSensorsTableDataProcedure_Result" />
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="OutOfDateWOs" FunctionName="ahmedModel.Store.OutOfDateWOs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ahmedModel.OutOfDateWOs_Result" />
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

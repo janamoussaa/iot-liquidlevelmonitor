@@ -1,0 +1,1947 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ahmedModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="acc_admin_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="user_id" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="event" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="datetime" Type="DateTime" />
+    <Property Name="table" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="row_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="acc_aicameraanalytics">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cameraId" Type="Int32" />
+    <Property Name="latitude" Type="Double" />
+    <Property Name="longitude" Type="Double" />
+    <Property Name="creationTime" Type="DateTime" Nullable="false" />
+    <Property Name="candidateSex" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="candidateName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="candidateDOB" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="candaidateId" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="candidateSimilarityPerson" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="strangerId" Type="Int32" />
+    <Property Name="candidateImage" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="FromAccess" Type="SByte" />
+    <Property Name="CreationTimeStamp" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="employeeId" Type="Int32" />
+    <Property Name="doorStatus" Type="SByte" />
+    <NavigationProperty Name="acc_devices" Relationship="Self.UE_CamId" FromRole="acc_aicameraanalytics" ToRole="acc_devices" />
+    <NavigationProperty Name="acc_strangers" Relationship="Self.UE_StangerId" FromRole="acc_aicameraanalytics" ToRole="acc_strangers" />
+  </EntityType>
+  <EntityType Name="acc_alerts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="alertSource" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="deviceId" Type="Int32" />
+    <Property Name="isSent" Type="SByte" />
+    <Property Name="image" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" />
+    <Property Name="lat" Type="Double" />
+    <Property Name="lng" Type="Double" />
+    <Property Name="CreationTimeStamp" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="acc_area">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="location" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="basemap" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="lat" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="lng" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="parent" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="acc_machine" Relationship="Self.acc_area_Id" FromRole="acc_area" ToRole="acc_machine" />
+    <NavigationProperty Name="acc_dashboard_contents" Relationship="Self.acc_dash_area_Id" FromRole="acc_area" ToRole="acc_dashboard_contents" />
+    <NavigationProperty Name="acc_sensor_widget_content" Relationship="Self.acc_sw_area_Id" FromRole="acc_area" ToRole="acc_sensor_widget_content" />
+    <NavigationProperty Name="acc_zone" Relationship="Self.acc_zone_area" FromRole="acc_area" ToRole="acc_zone" />
+    <NavigationProperty Name="acc_sensors" Relationship="Self.Access_AreaId" FromRole="acc_area" ToRole="acc_sensors" />
+    <NavigationProperty Name="acc_floor" Relationship="Self.area_floor" FromRole="acc_area" ToRole="acc_floor" />
+    <NavigationProperty Name="users" Relationship="Self.area_parent" FromRole="acc_area" ToRole="users" />
+    <NavigationProperty Name="acc_devices" Relationship="Self.device_area" FromRole="acc_area" ToRole="acc_devices" />
+    <NavigationProperty Name="acc_gefence" Relationship="Self.geofencearea" FromRole="acc_area" ToRole="acc_gefence" />
+    <NavigationProperty Name="acc_subarea" Relationship="Self.subarea_areaid" FromRole="acc_area" ToRole="acc_subarea" />
+  </EntityType>
+  <EntityType Name="acc_assign_emp_access">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="emp_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="emp_id" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="emp_id_no" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="emp_cardno" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="emp_password" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="emp_pic" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="device_ip" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="device_id" Type="Int32" />
+    <Property Name="device_username" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="device_password" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="role" Type="Int32" />
+    <Property Name="parent" Type="Int32" />
+    <Property Name="userstatus" Type="Int32" />
+    <Property Name="picstatus" Type="Int32" />
+    <Property Name="message" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="valid" Type="Int32" />
+    <Property Name="operation" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="error" Type="Int32" />
+    <Property Name="isVisitor" Type="Boolean" />
+    <NavigationProperty Name="users" Relationship="Self.empmachparent" FromRole="acc_assign_emp_access" ToRole="users" />
+  </EntityType>
+  <EntityType Name="acc_basemaps">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="url" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="parent" Type="Int32" />
+    <NavigationProperty Name="users" Relationship="Self.basemapparent" FromRole="acc_basemaps" ToRole="users" />
+  </EntityType>
+  <EntityType Name="acc_cameras_records">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="camera_id" Type="Int32" />
+    <Property Name="startTime" Type="DateTime" Nullable="false" />
+    <Property Name="endTime" Type="DateTime" Nullable="false" />
+    <Property Name="recordHttpURL" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="recordFtpURL" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="CreatorId" Type="Int32" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" />
+    <Property Name="sizeInGiga" Type="Double" />
+    <NavigationProperty Name="acc_devices" Relationship="Self.ue_camera_Id" FromRole="acc_cameras_records" ToRole="acc_devices" />
+  </EntityType>
+  <EntityType Name="acc_collect_data">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="gatewayId" Type="Int32" />
+    <Property Name="parentId" Type="Int32" />
+    <Property Name="siteId" Type="Int32" />
+    <Property Name="creationTime" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="acc_floor" Relationship="Self.acc_cd_floorId" FromRole="acc_collect_data" ToRole="acc_floor" />
+    <NavigationProperty Name="acc_devices" Relationship="Self.acc_g_deviceId" FromRole="acc_collect_data" ToRole="acc_devices" />
+  </EntityType>
+  <EntityType Name="acc_dashboard">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="index" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="parentId" Type="Int32" />
+    <NavigationProperty Name="acc_dashboard_contents" Relationship="Self.acc_dashboard_Id" FromRole="acc_dashboard" ToRole="acc_dashboard_contents" />
+  </EntityType>
+  <EntityType Name="acc_dashboard_contents">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="index" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="parentId" Type="Int32" />
+    <Property Name="dashboardId" Type="Int32" />
+    <Property Name="contentType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="areaId" Type="Int32" />
+    <Property Name="floorId" Type="Int32" />
+    <Property Name="elementData" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sensorId" Type="Int32" />
+    <Property Name="sensorKeyId" Type="Int32" />
+    <NavigationProperty Name="acc_area" Relationship="Self.acc_dash_area_Id" FromRole="acc_dashboard_contents" ToRole="acc_area" />
+    <NavigationProperty Name="acc_dashboard" Relationship="Self.acc_dashboard_Id" FromRole="acc_dashboard_contents" ToRole="acc_dashboard" />
+    <NavigationProperty Name="acc_floor" Relationship="Self.acc_dash_floor_Id" FromRole="acc_dashboard_contents" ToRole="acc_floor" />
+    <NavigationProperty Name="acc_sensors" Relationship="Self.acc_dash_sensor_Id" FromRole="acc_dashboard_contents" ToRole="acc_sensors" />
+  </EntityType>
+  <EntityType Name="acc_device_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="device_type" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="parent" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="users" Relationship="Self.device_type_parent" FromRole="acc_device_type" ToRole="users" />
+  </EntityType>
+  <EntityType Name="acc_devices">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="device_ip" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="device_type" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="device_model" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="area_id" Type="Int32" />
+    <Property Name="floor_id" Type="Int32" />
+    <Property Name="location" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="lat" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="lng" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="parent" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="information" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="username" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="serial_number" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="model" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="door_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="fps" Type="Int32" Nullable="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="rtsp_link" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="channelsNumber" Type="Int32" />
+    <Property Name="enableAutomaticRecording" Type="Boolean" />
+    <Property Name="supportOnVif" Type="Boolean" Nullable="false" />
+    <Property Name="portNumber" Type="Int32" />
+    <Property Name="isAiCamera" Type="Boolean" />
+    <Property Name="cameraImage" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="CreatorId" Type="Int32" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" />
+    <Property Name="gateway_output" Type="Int32" />
+    <Property Name="gateway_inputs" Type="Int32" />
+    <Property Name="traffic_status" Type="Int32" />
+    <Property Name="weather_wind" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="weather_waves" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="acc_aicameraanalytics" Relationship="Self.UE_CamId" FromRole="acc_devices" ToRole="acc_aicameraanalytics" />
+    <NavigationProperty Name="acc_area" Relationship="Self.device_area" FromRole="acc_devices" ToRole="acc_area" />
+    <NavigationProperty Name="acc_cameras_records" Relationship="Self.ue_camera_Id" FromRole="acc_devices" ToRole="acc_cameras_records" />
+    <NavigationProperty Name="acc_collect_data" Relationship="Self.acc_g_deviceId" FromRole="acc_devices" ToRole="acc_collect_data" />
+    <NavigationProperty Name="acc_machine" Relationship="Self.acc_device_Id" FromRole="acc_devices" ToRole="acc_machine" />
+    <NavigationProperty Name="acc_sensors" Relationship="Self.Access_MachineId" FromRole="acc_devices" ToRole="acc_sensors" />
+    <NavigationProperty Name="acc_strangers" Relationship="Self.cameraId" FromRole="acc_devices" ToRole="acc_strangers" />
+    <NavigationProperty Name="acc_floor" Relationship="Self.device_floor" FromRole="acc_devices" ToRole="acc_floor" />
+    <NavigationProperty Name="users" Relationship="Self.device_parent" FromRole="acc_devices" ToRole="users" />
+    <NavigationProperty Name="acc_doors" Relationship="Self.door_device" FromRole="acc_devices" ToRole="acc_doors" />
+  </EntityType>
+  <EntityType Name="acc_doors">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="device_id" Type="Int32" />
+    <Property Name="parent" Type="Int32" Nullable="false" />
+    <Property Name="door_status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="acc_devices" Relationship="Self.door_device" FromRole="acc_doors" ToRole="acc_devices" />
+    <NavigationProperty Name="users" Relationship="Self.parent_device" FromRole="acc_doors" ToRole="users" />
+  </EntityType>
+  <EntityType Name="acc_emp_department">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="department" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="parent" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="acc_employee" Relationship="Self.department_emp" FromRole="acc_emp_department" ToRole="acc_employee" />
+    <NavigationProperty Name="users" Relationship="Self.department_parent" FromRole="acc_emp_department" ToRole="users" />
+  </EntityType>
+  <EntityType Name="acc_emp_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="emp_type" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="parent" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="acc_employee" Relationship="Self.emp_type" FromRole="acc_emp_type" ToRole="acc_employee" />
+    <NavigationProperty Name="users" Relationship="Self.parentwithuser" FromRole="acc_emp_type" ToRole="users" />
+  </EntityType>
+  <EntityType Name="acc_employee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="emp_type" Type="Int32" />
+    <Property Name="id_no" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="department" Type="Int32" />
+    <Property Name="emp_pic" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="phone1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="phone2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="valid" Type="Int32" Nullable="false" />
+    <Property Name="card" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="face_id" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="id_pic" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="creation_time" Type="DateTime" />
+    <Property Name="information" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="parent" Type="Int32" />
+    <Property Name="machine_recno" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="role" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="acc_emp_department" Relationship="Self.department_emp" FromRole="acc_employee" ToRole="acc_emp_department" />
+    <NavigationProperty Name="acc_emp_type" Relationship="Self.emp_type" FromRole="acc_employee" ToRole="acc_emp_type" />
+    <NavigationProperty Name="acc_visits" Relationship="Self.acc_emp_v_Id" FromRole="acc_employee" ToRole="acc_visits" />
+    <NavigationProperty Name="users" Relationship="Self.emp_parent" FromRole="acc_employee" ToRole="users" />
+  </EntityType>
+  <EntityType Name="acc_event_exced">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="event_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="event_id" Type="Int32" />
+    <Property Name="acutal_value" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="operator" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="condition_value" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="sensor_id" Type="Int32" />
+    <Property Name="sensor_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="sensor_mac" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="gateway_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="gateway_id" Type="Int32" />
+    <Property Name="gateway_output" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="gateway_output_type" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="gateway_output_delay" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="gateway_output_time" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="creation_time" Type="DateTime" />
+    <Property Name="alert" Type="Int32" />
+    <Property Name="parent" Type="Int32" />
+  </EntityType>
+  <EntityType Name="acc_floor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="area_id" Type="Int32" />
+    <Property Name="parent" Type="Int32" />
+    <Property Name="layer" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="layer_url" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="subarea_id" Type="Int32" />
+    <Property Name="lat" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="lng" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="acc_area" Relationship="Self.area_floor" FromRole="acc_floor" ToRole="acc_area" />
+    <NavigationProperty Name="acc_collect_data" Relationship="Self.acc_cd_floorId" FromRole="acc_floor" ToRole="acc_collect_data" />
+    <NavigationProperty Name="acc_dashboard_contents" Relationship="Self.acc_dash_floor_Id" FromRole="acc_floor" ToRole="acc_dashboard_contents" />
+    <NavigationProperty Name="acc_devices" Relationship="Self.device_floor" FromRole="acc_floor" ToRole="acc_devices" />
+    <NavigationProperty Name="acc_machine" Relationship="Self.acc_floor_Id" FromRole="acc_floor" ToRole="acc_machine" />
+    <NavigationProperty Name="acc_sensor_widget_content" Relationship="Self.acc_sw_floor_Id" FromRole="acc_floor" ToRole="acc_sensor_widget_content" />
+    <NavigationProperty Name="acc_sensors" Relationship="Self.Access_FloorId" FromRole="acc_floor" ToRole="acc_sensors" />
+    <NavigationProperty Name="users" Relationship="Self.floor_parent" FromRole="acc_floor" ToRole="users" />
+    <NavigationProperty Name="acc_subarea" Relationship="Self.subarea_floor" FromRole="acc_floor" ToRole="acc_subarea" />
+  </EntityType>
+  <EntityType Name="acc_gefence">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="polylineName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RoutePoints" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="areaID" Type="Int32" />
+    <Property Name="floorID" Type="Int32" />
+    <Property Name="parent" Type="Int32" />
+    <Property Name="gefenceType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="acc_area" Relationship="Self.geofencearea" FromRole="acc_gefence" ToRole="acc_area" />
+    <NavigationProperty Name="users" Relationship="Self.geofenceparent" FromRole="acc_gefence" ToRole="users" />
+  </EntityType>
+  <EntityType Name="acc_integration">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="host" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="json" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="customheaders" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="enable" Type="Int32" />
+    <Property Name="parent" Type="Int32" />
+    <NavigationProperty Name="users" Relationship="Self.integration_parent" FromRole="acc_integration" ToRole="users" />
+  </EntityType>
+  <EntityType Name="acc_machine">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="machineName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="areaId" Type="Int32" />
+    <Property Name="floorId" Type="Int32" />
+    <Property Name="lat" Type="Double" />
+    <Property Name="lng" Type="Double" />
+    <Property Name="creatorId" Type="Int32" Nullable="false" />
+    <Property Name="creationTime" Type="DateTime" Nullable="false" />
+    <Property Name="parentId" Type="Int32" />
+    <Property Name="deviceId" Type="Int32" />
+    <Property Name="machineImage" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="acc_area" Relationship="Self.acc_area_Id" FromRole="acc_machine" ToRole="acc_area" />
+    <NavigationProperty Name="acc_devices" Relationship="Self.acc_device_Id" FromRole="acc_machine" ToRole="acc_devices" />
+    <NavigationProperty Name="acc_floor" Relationship="Self.acc_floor_Id" FromRole="acc_machine" ToRole="acc_floor" />
+  </EntityType>
+  <EntityType Name="acc_mail_server_configuration">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="emailServer" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="senderMailAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="senderMailPassword" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="enableSSL" Type="Boolean" Nullable="false" />
+    <Property Name="creatorId" Type="Int32" Nullable="false" />
+    <Property Name="creationTime" Type="DateTime" Nullable="false" />
+    <Property Name="portNumber" Type="Int32" Nullable="false" />
+    <Property Name="mailBody" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mailSubject" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="parentId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="acc_role_of_sensors">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="creatorId" Type="Int32" Nullable="false" />
+    <Property Name="creationTime" Type="DateTime" Nullable="false" />
+    <Property Name="parentId" Type="Int32" />
+    <Property Name="alertableValue" Type="Double" Nullable="false" />
+    <Property Name="actionedValue" Type="Double" />
+    <NavigationProperty Name="acc_sensor_roles" Relationship="Self.acc_role_sensor_Id" FromRole="acc_role_of_sensors" ToRole="acc_sensor_roles" />
+  </EntityType>
+  <EntityType Name="acc_roles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="areas" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="floors" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="devices" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="parent" Type="Int32" />
+    <NavigationProperty Name="users" Relationship="Self.rolesparent" FromRole="acc_roles" ToRole="users" />
+  </EntityType>
+  <EntityType Name="acc_scenarios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="target_sensor" Type="Int32" />
+    <Property Name="operate" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="value" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="action_gateway" Type="Int32" />
+    <Property Name="gateway_output" Type="Int32" />
+    <Property Name="type" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="alert" Type="Int32" />
+    <Property Name="parent" Type="Int32" />
+    <Property Name="time" Type="Int32" />
+    <Property Name="delay" Type="Int32" />
+    <Property Name="integration_id" Type="Int32" />
+    <NavigationProperty Name="users" Relationship="Self.scenario_parent" FromRole="acc_scenarios" ToRole="users" />
+    <NavigationProperty Name="acc_sensors" Relationship="Self.senario_sensor" FromRole="acc_scenarios" ToRole="acc_sensors" />
+  </EntityType>
+  <EntityType Name="acc_sensor_analytics">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sensorId" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="value" Type="Double" Nullable="false" />
+    <Property Name="creationTime" Type="DateTime" Nullable="false" />
+    <Property Name="mac_address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sensor_id" Type="Int32" />
+    <Property Name="sensor_key_id" Type="Int32" />
+    <Property Name="gateway_input" Type="Int32" />
+    <NavigationProperty Name="acc_sensors" Relationship="Self.sensor_analytcs_mac" FromRole="acc_sensor_analytics" ToRole="acc_sensors" />
+  </EntityType>
+  <EntityType Name="acc_sensor_analytics_dummy_data">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sensorId" Type="Int32" />
+    <Property Name="value" Type="Double" />
+    <Property Name="isAlertable" Type="Boolean" />
+    <Property Name="creationTime" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="acc_sensor_roles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sensorId" Type="Int32" />
+    <Property Name="roleId" Type="Int32" />
+    <NavigationProperty Name="acc_role_of_sensors" Relationship="Self.acc_role_sensor_Id" FromRole="acc_sensor_roles" ToRole="acc_role_of_sensors" />
+    <NavigationProperty Name="acc_sensors" Relationship="Self.acc_sensor_Id" FromRole="acc_sensor_roles" ToRole="acc_sensors" />
+  </EntityType>
+  <EntityType Name="acc_sensor_types">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ar_name" Type="String" MaxLength="65" FixedLength="false" Unicode="false" />
+    <Property Name="en_name" Type="String" MaxLength="65" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="acc_sensor_types_keys" Relationship="Self.type_id_sensor" FromRole="acc_sensor_types" ToRole="acc_sensor_types_keys" />
+  </EntityType>
+  <EntityType Name="acc_sensor_types_keys">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ar_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="en_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="type_id" Type="Int32" />
+    <Property Name="unit" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="acc_sensor_types" Relationship="Self.type_id_sensor" FromRole="acc_sensor_types_keys" ToRole="acc_sensor_types" />
+    <NavigationProperty Name="acc_sensors_key" Relationship="Self.sensor_type_key" FromRole="acc_sensor_types_keys" ToRole="acc_sensors_key" />
+  </EntityType>
+  <EntityType Name="acc_sensor_widget_content">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="index" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="parentId" Type="Int32" />
+    <Property Name="sensorWidgetId" Type="Int32" />
+    <Property Name="widgetType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sensorId" Type="Int32" />
+    <Property Name="sensorKeyId" Type="Int32" />
+    <Property Name="areaId" Type="Int32" />
+    <Property Name="floorId" Type="Int32" />
+    <NavigationProperty Name="acc_area" Relationship="Self.acc_sw_area_Id" FromRole="acc_sensor_widget_content" ToRole="acc_area" />
+    <NavigationProperty Name="acc_floor" Relationship="Self.acc_sw_floor_Id" FromRole="acc_sensor_widget_content" ToRole="acc_floor" />
+    <NavigationProperty Name="acc_sensor_widgets" Relationship="Self.sensorWidget_Id" FromRole="acc_sensor_widget_content" ToRole="acc_sensor_widgets" />
+  </EntityType>
+  <EntityType Name="acc_sensor_widgets">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="index" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="parentId" Type="Int32" />
+    <NavigationProperty Name="acc_sensor_widget_content" Relationship="Self.sensorWidget_Id" FromRole="acc_sensor_widgets" ToRole="acc_sensor_widget_content" />
+  </EntityType>
+  <EntityType Name="acc_sensors">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="creatorId" Type="Int32" Nullable="false" />
+    <Property Name="creationTime" Type="DateTime" Nullable="false" />
+    <Property Name="image" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="areaId" Type="Int32" />
+    <Property Name="floorId" Type="Int32" />
+    <Property Name="lat" Type="Double" />
+    <Property Name="lng" Type="Double" />
+    <Property Name="macAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="deviceId" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="machineId" Type="Int32" />
+    <Property Name="text" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="value" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="normal_value" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="parent" Type="Int32" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="last_update" Type="DateTime" />
+    <Property Name="alert" Type="Int32" />
+    <Property Name="sensor_type" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="gateway_input" Type="Int32" />
+    <Property Name="max_value" Type="Int32" />
+    <Property Name="max_value_alerting" Type="Int32" />
+    <Property Name="min_value" Type="Int32" />
+    <Property Name="min_value_alerting" Type="Int32" />
+    <Property Name="critical_max_value" Type="Int32" />
+    <Property Name="critical_max_value_alerting" Type="Int32" />
+    <Property Name="critical_min_value" Type="Int32" />
+    <Property Name="critical_min_value_alerting" Type="Int32" />
+    <Property Name="sensor_model" Type="Int32" />
+    <Property Name="voltage_type" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="acc_area" Relationship="Self.Access_AreaId" FromRole="acc_sensors" ToRole="acc_area" />
+    <NavigationProperty Name="acc_dashboard_contents" Relationship="Self.acc_dash_sensor_Id" FromRole="acc_sensors" ToRole="acc_dashboard_contents" />
+    <NavigationProperty Name="acc_devices" Relationship="Self.Access_MachineId" FromRole="acc_sensors" ToRole="acc_devices" />
+    <NavigationProperty Name="acc_floor" Relationship="Self.Access_FloorId" FromRole="acc_sensors" ToRole="acc_floor" />
+    <NavigationProperty Name="acc_scenarios" Relationship="Self.senario_sensor" FromRole="acc_sensors" ToRole="acc_scenarios" />
+    <NavigationProperty Name="acc_sensor_analytics" Relationship="Self.sensor_analytcs_mac" FromRole="acc_sensors" ToRole="acc_sensor_analytics" />
+    <NavigationProperty Name="acc_sensor_roles" Relationship="Self.acc_sensor_Id" FromRole="acc_sensors" ToRole="acc_sensor_roles" />
+    <NavigationProperty Name="acc_sensors_key" Relationship="Self.sensor_id_key" FromRole="acc_sensors" ToRole="acc_sensors_key" />
+    <NavigationProperty Name="users" Relationship="Self.sensor_parent" FromRole="acc_sensors" ToRole="users" />
+  </EntityType>
+  <EntityType Name="acc_sensors_key">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sensor_id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="max_value" Type="Double" Nullable="false" />
+    <Property Name="max_value_alerting" Type="Double" Nullable="false" />
+    <Property Name="min_value" Type="Double" Nullable="false" />
+    <Property Name="min_value_alerting" Type="Double" Nullable="false" />
+    <Property Name="critical_max_value" Type="Double" Nullable="false" />
+    <Property Name="critical_max_value_alerting" Type="Double" Nullable="false" />
+    <Property Name="critical_min_value" Type="Double" Nullable="false" />
+    <Property Name="critical_min_value_alerting" Type="Double" Nullable="false" />
+    <Property Name="last_value" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="last_update" Type="DateTime" />
+    <Property Name="gateway_id" Type="Int32" />
+    <Property Name="gateway_input" Type="Int32" />
+    <Property Name="water_level_position" Type="Int32" />
+    <Property Name="sensor_type_key_id" Type="Int32" />
+    <Property Name="sensor_key" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="acc_sensor_types_keys" Relationship="Self.sensor_type_key" FromRole="acc_sensors_key" ToRole="acc_sensor_types_keys" />
+    <NavigationProperty Name="acc_sensors" Relationship="Self.sensor_id_key" FromRole="acc_sensors_key" ToRole="acc_sensors" />
+  </EntityType>
+  <EntityType Name="acc_strangers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" />
+    <Property Name="stangerImage" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="latitude" Type="Double" />
+    <Property Name="longitude" Type="Double" />
+    <Property Name="strangerSex" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="starngerAge" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="starngerSkinColor" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="starngerEye" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="starngerMouth" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="starngerMask" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="starngerBeard" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="starngerFaceQuality" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="cameraId" Type="Int32" />
+    <Property Name="FromAccess" Type="SByte" />
+    <Property Name="CreationTimeStamp" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="doorStatus" Type="SByte" />
+    <NavigationProperty Name="acc_aicameraanalytics" Relationship="Self.UE_StangerId" FromRole="acc_strangers" ToRole="acc_aicameraanalytics" />
+    <NavigationProperty Name="acc_devices" Relationship="Self.cameraId" FromRole="acc_strangers" ToRole="acc_devices" />
+  </EntityType>
+  <EntityType Name="acc_subarea">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="area_id" Type="Int32" />
+    <Property Name="lat" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="lng" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="parent" Type="Int32" />
+    <NavigationProperty Name="acc_area" Relationship="Self.subarea_areaid" FromRole="acc_subarea" ToRole="acc_area" />
+    <NavigationProperty Name="acc_floor" Relationship="Self.subarea_floor" FromRole="acc_subarea" ToRole="acc_floor" />
+    <NavigationProperty Name="users" Relationship="Self.subarea_parent" FromRole="acc_subarea" ToRole="users" />
+  </EntityType>
+  <EntityType Name="acc_uetv_credentials">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ftp_server" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ftp_server_user_name" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ftp_server_password" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ftp_port" Type="Int32" Nullable="false" />
+    <Property Name="ftp_server_get" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="parentId" Type="Int32" />
+    <Property Name="UsedSpacePercentAlerting" Type="Double" />
+    <Property Name="FirstInFirstOutDeletionMode" Type="Boolean" />
+    <Property Name="AlertingOnly" Type="Boolean" />
+    <Property Name="ftpStorageInGiga" Type="Double" />
+    <Property Name="dir" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="users" Relationship="Self.ftp_parent" FromRole="acc_uetv_credentials" ToRole="users" />
+  </EntityType>
+  <EntityType Name="acc_visitor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_no" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_pic" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="pic" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="parentId" Type="Int32" />
+    <Property Name="visitId" Type="Int32" />
+    <Property Name="creatorId" Type="Int32" Nullable="false" />
+    <Property Name="creationTime" Type="DateTime" Nullable="false" />
+    <Property Name="visitorMail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="acc_visits" Relationship="Self.acc_visit_Id" FromRole="acc_visitor" ToRole="acc_visits" />
+    <NavigationProperty Name="users" Relationship="Self.visitor_parent" FromRole="acc_visitor" ToRole="users" />
+  </EntityType>
+  <EntityType Name="acc_visits">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="visitPurpose" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="visitStart" Type="DateTime" Nullable="false" />
+    <Property Name="visitEnd" Type="DateTime" Nullable="false" />
+    <Property Name="visitCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="parentId" Type="Int32" Nullable="false" />
+    <Property Name="employeeId" Type="Int32" />
+    <Property Name="creatorId" Type="Int32" Nullable="false" />
+    <Property Name="creationTime" Type="DateTime" Nullable="false" />
+    <Property Name="isApproved" Type="Boolean" />
+    <Property Name="isAtteneded" Type="Boolean" />
+    <Property Name="checkOutTime" Type="DateTime" />
+    <NavigationProperty Name="acc_employee" Relationship="Self.acc_emp_v_Id" FromRole="acc_visits" ToRole="acc_employee" />
+    <NavigationProperty Name="acc_visitor" Relationship="Self.acc_visit_Id" FromRole="acc_visits" ToRole="acc_visitor" />
+  </EntityType>
+  <EntityType Name="acc_zone">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lat" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="lng" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="parent" Type="Int32" />
+    <Property Name="area_id" Type="Int32" />
+    <NavigationProperty Name="acc_area" Relationship="Self.acc_zone_area" FromRole="acc_zone" ToRole="acc_area" />
+    <NavigationProperty Name="acc_zone1" Relationship="Self.acc_zone_parent" FromRole="acc_zone" ToRole="acc_zone1" />
+    <NavigationProperty Name="acc_zone2" Relationship="Self.acc_zone_parent" FromRole="acc_zone1" ToRole="acc_zone" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="device_limit" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="time" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="role" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="start_date" Type="DateTime" />
+    <Property Name="end_date" Type="DateTime" />
+    <Property Name="parentID" Type="Int32" />
+    <Property Name="time_zone" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="invoice_sum" Type="Double" />
+    <Property Name="add_client" Type="Int32" Nullable="false" />
+    <Property Name="client_total" Type="Int32" Nullable="false" />
+    <Property Name="token" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="mobile_token" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="customer_invoices" Type="Int32" Nullable="false" />
+    <Property Name="safe" Type="Double" Nullable="false" />
+    <Property Name="request" Type="Int32" Nullable="false" />
+    <Property Name="bank" Type="Double" Nullable="false" />
+    <Property Name="regestration" Type="Int32" Nullable="false" />
+    <Property Name="file_uploads" Type="Int64" Nullable="false" />
+    <Property Name="relation_item" Type="Int32" Nullable="false" />
+    <Property Name="relation_areas" Type="Int32" Nullable="false" />
+    <Property Name="relation_visiablity" Type="Int32" Nullable="false" />
+    <Property Name="relation_compition" Type="Int32" Nullable="false" />
+    <Property Name="sos_ml" Type="Int32" Nullable="false" />
+    <Property Name="number_classes" Type="Int32" Nullable="false" />
+    <Property Name="last_access" Type="DateTime" />
+    <Property Name="acc_valid" Type="Int32" />
+    <Property Name="acc_lastlogin" Type="DateTime" />
+    <Property Name="acc_token" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="acc_token_expire" Type="DateTime" />
+    <Property Name="acc_ftp_id" Type="Int32" />
+    <Property Name="acc_ftp_dir" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="acc_is_online" Type="SByte" />
+    <NavigationProperty Name="acc_area" Relationship="Self.area_parent" FromRole="users" ToRole="acc_area" />
+    <NavigationProperty Name="acc_assign_emp_access" Relationship="Self.empmachparent" FromRole="users" ToRole="acc_assign_emp_access" />
+    <NavigationProperty Name="acc_basemaps" Relationship="Self.basemapparent" FromRole="users" ToRole="acc_basemaps" />
+    <NavigationProperty Name="acc_device_type" Relationship="Self.device_type_parent" FromRole="users" ToRole="acc_device_type" />
+    <NavigationProperty Name="acc_devices" Relationship="Self.device_parent" FromRole="users" ToRole="acc_devices" />
+    <NavigationProperty Name="acc_doors" Relationship="Self.parent_device" FromRole="users" ToRole="acc_doors" />
+    <NavigationProperty Name="acc_emp_department" Relationship="Self.department_parent" FromRole="users" ToRole="acc_emp_department" />
+    <NavigationProperty Name="acc_emp_type" Relationship="Self.parentwithuser" FromRole="users" ToRole="acc_emp_type" />
+    <NavigationProperty Name="acc_employee" Relationship="Self.emp_parent" FromRole="users" ToRole="acc_employee" />
+    <NavigationProperty Name="acc_floor" Relationship="Self.floor_parent" FromRole="users" ToRole="acc_floor" />
+    <NavigationProperty Name="acc_gefence" Relationship="Self.geofenceparent" FromRole="users" ToRole="acc_gefence" />
+    <NavigationProperty Name="acc_integration" Relationship="Self.integration_parent" FromRole="users" ToRole="acc_integration" />
+    <NavigationProperty Name="acc_roles" Relationship="Self.rolesparent" FromRole="users" ToRole="acc_roles" />
+    <NavigationProperty Name="acc_scenarios" Relationship="Self.scenario_parent" FromRole="users" ToRole="acc_scenarios" />
+    <NavigationProperty Name="acc_sensors" Relationship="Self.sensor_parent" FromRole="users" ToRole="acc_sensors" />
+    <NavigationProperty Name="acc_subarea" Relationship="Self.subarea_parent" FromRole="users" ToRole="acc_subarea" />
+    <NavigationProperty Name="acc_uetv_credentials" Relationship="Self.ftp_parent" FromRole="users" ToRole="acc_uetv_credentials" />
+    <NavigationProperty Name="acc_visitor" Relationship="Self.visitor_parent" FromRole="users" ToRole="acc_visitor" />
+  </EntityType>
+  <EntityType Name="compls">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="CreatorId" />
+      <PropertyRef Name="CreationTime" />
+      <PropertyRef Name="checked" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="parent" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="vechileId" Type="Int32" />
+    <Property Name="DriverId" Type="Int32" />
+    <Property Name="EmpId" Type="Int32" />
+    <Property Name="CustomerId" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" Nullable="false" />
+    <Property Name="CreationTime" Type="DateTime" Nullable="false" />
+    <Property Name="checked" Type="Boolean" Nullable="false" />
+    <Property Name="WorkOrdered" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="parent" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="edusecstdnumb">
+    <Key>
+      <PropertyRef Name="Count_Std_Id_" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="StdSchoolId" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Count_Std_Id_" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="fleet_rpts">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="ReportDescription" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="parent" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="ReportDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vechileId" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreationTime" Type="DateTime" />
+    <Property Name="ModifierId" Type="Int32" />
+    <Property Name="ModificationTime" Type="DateTime" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="parent" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="getftpdirectortforsensor">
+    <Key>
+      <PropertyRef Name="usId" />
+      <PropertyRef Name="id" />
+      <PropertyRef Name="device_ip" />
+      <PropertyRef Name="ftp_server" />
+      <PropertyRef Name="ftp_server_get" />
+      <PropertyRef Name="ftp_server_user_name" />
+      <PropertyRef Name="ftp_port" />
+      <PropertyRef Name="ftp_server_password" />
+    </Key>
+    <Property Name="dir" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="acc_ftp_dir" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="usId" Type="Int32" Nullable="false" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="device_ip" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="rtsp_link" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ftp_server" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ftp_server_get" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ftp_server_user_name" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ftp_port" Type="Int32" Nullable="false" />
+    <Property Name="ftp_server_password" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ftpStorageInGiga" Type="Double" />
+    <Property Name="UsedSpacePercentAlerting" Type="Double" />
+    <Property Name="FirstInFirstOutDeletionMode" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="invalidmainstockitemquan">
+    <Key>
+      <PropertyRef Name="mainStockId" />
+      <PropertyRef Name="mainStockName" />
+      <PropertyRef Name="itemId" />
+      <PropertyRef Name="itemName" />
+      <PropertyRef Name="itemBalancePoint" />
+      <PropertyRef Name="itemRequestLimit" />
+    </Key>
+    <Property Name="mainStockId" Type="Int32" Nullable="false" />
+    <Property Name="mainStockName" Type="String" MaxLength="450" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="itemId" Type="Int32" Nullable="false" />
+    <Property Name="itemName" Type="String" MaxLength="450" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="itemBalancePoint" Type="Double" Nullable="false" />
+    <Property Name="itemRequestLimit" Type="Double" Nullable="false" />
+    <Property Name="itemQuantityInStock" Type="Double" />
+  </EntityType>
+  <EntityType Name="invalidsubstockitemquan">
+    <Key>
+      <PropertyRef Name="subStockId" />
+      <PropertyRef Name="subStockName" />
+      <PropertyRef Name="itemId" />
+      <PropertyRef Name="itemName" />
+      <PropertyRef Name="itemBalancePoint" />
+      <PropertyRef Name="itemRequestLimit" />
+    </Key>
+    <Property Name="subStockId" Type="Int32" Nullable="false" />
+    <Property Name="subStockName" Type="String" MaxLength="450" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="itemId" Type="Int32" Nullable="false" />
+    <Property Name="itemName" Type="String" MaxLength="450" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="itemBalancePoint" Type="Double" Nullable="false" />
+    <Property Name="itemRequestLimit" Type="Double" Nullable="false" />
+    <Property Name="itemQuantityInStock" Type="Double" />
+  </EntityType>
+  <EntityType Name="schoolusers">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="admin_valid" />
+      <PropertyRef Name="time_zone" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="parent" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="alarm_distance" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="alarm_speed" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="alarm_geofence" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="alarm_alarm" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="expire" Type="DateTime" />
+    <Property Name="valid" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="phone_number" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="limit" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="admin_valid" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="whats_app_number" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="time_zone" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsParent" Type="Boolean" />
+    <Property Name="IsTeacher" Type="Boolean" />
+    <Property Name="IsStudent" Type="Boolean" />
+    <Property Name="IsDriver" Type="Boolean" />
+    <Property Name="IsEmployee" Type="Boolean" />
+    <Property Name="serial" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="latitude" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="longitude" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="UE_CamId">
+    <End Role="acc_devices" Type="Self.acc_devices" Multiplicity="0..1" />
+    <End Role="acc_aicameraanalytics" Type="Self.acc_aicameraanalytics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_devices">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_aicameraanalytics">
+        <PropertyRef Name="cameraId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UE_StangerId">
+    <End Role="acc_strangers" Type="Self.acc_strangers" Multiplicity="0..1" />
+    <End Role="acc_aicameraanalytics" Type="Self.acc_aicameraanalytics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_strangers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_aicameraanalytics">
+        <PropertyRef Name="strangerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="acc_area_Id">
+    <End Role="acc_area" Type="Self.acc_area" Multiplicity="0..1" />
+    <End Role="acc_machine" Type="Self.acc_machine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_area">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_machine">
+        <PropertyRef Name="areaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="acc_dash_area_Id">
+    <End Role="acc_area" Type="Self.acc_area" Multiplicity="0..1" />
+    <End Role="acc_dashboard_contents" Type="Self.acc_dashboard_contents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_area">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_dashboard_contents">
+        <PropertyRef Name="areaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="acc_sw_area_Id">
+    <End Role="acc_area" Type="Self.acc_area" Multiplicity="0..1" />
+    <End Role="acc_sensor_widget_content" Type="Self.acc_sensor_widget_content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_area">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_sensor_widget_content">
+        <PropertyRef Name="areaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="acc_zone_area">
+    <End Role="acc_area" Type="Self.acc_area" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_zone" Type="Self.acc_zone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_area">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_zone">
+        <PropertyRef Name="area_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Access_AreaId">
+    <End Role="acc_area" Type="Self.acc_area" Multiplicity="0..1" />
+    <End Role="acc_sensors" Type="Self.acc_sensors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_area">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_sensors">
+        <PropertyRef Name="areaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="area_floor">
+    <End Role="acc_area" Type="Self.acc_area" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_floor" Type="Self.acc_floor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_area">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_floor">
+        <PropertyRef Name="area_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="area_parent">
+    <End Role="users" Type="Self.users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_area" Type="Self.acc_area" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_area">
+        <PropertyRef Name="parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="device_area">
+    <End Role="acc_area" Type="Self.acc_area" Multiplicity="0..1" />
+    <End Role="acc_devices" Type="Self.acc_devices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_area">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_devices">
+        <PropertyRef Name="area_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="geofencearea">
+    <End Role="acc_area" Type="Self.acc_area" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_gefence" Type="Self.acc_gefence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_area">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_gefence">
+        <PropertyRef Name="areaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="subarea_areaid">
+    <End Role="acc_area" Type="Self.acc_area" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_subarea" Type="Self.acc_subarea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_area">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_subarea">
+        <PropertyRef Name="area_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="empmachparent">
+    <End Role="users" Type="Self.users" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_assign_emp_access" Type="Self.acc_assign_emp_access" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_assign_emp_access">
+        <PropertyRef Name="parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="basemapparent">
+    <End Role="users" Type="Self.users" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_basemaps" Type="Self.acc_basemaps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_basemaps">
+        <PropertyRef Name="parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ue_camera_Id">
+    <End Role="acc_devices" Type="Self.acc_devices" Multiplicity="0..1" />
+    <End Role="acc_cameras_records" Type="Self.acc_cameras_records" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_devices">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_cameras_records">
+        <PropertyRef Name="camera_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="acc_cd_floorId">
+    <End Role="acc_floor" Type="Self.acc_floor" Multiplicity="0..1" />
+    <End Role="acc_collect_data" Type="Self.acc_collect_data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_floor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_collect_data">
+        <PropertyRef Name="siteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="acc_g_deviceId">
+    <End Role="acc_devices" Type="Self.acc_devices" Multiplicity="0..1" />
+    <End Role="acc_collect_data" Type="Self.acc_collect_data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_devices">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_collect_data">
+        <PropertyRef Name="gatewayId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="acc_dashboard_Id">
+    <End Role="acc_dashboard" Type="Self.acc_dashboard" Multiplicity="0..1" />
+    <End Role="acc_dashboard_contents" Type="Self.acc_dashboard_contents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_dashboard">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_dashboard_contents">
+        <PropertyRef Name="dashboardId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="acc_dash_floor_Id">
+    <End Role="acc_floor" Type="Self.acc_floor" Multiplicity="0..1" />
+    <End Role="acc_dashboard_contents" Type="Self.acc_dashboard_contents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_floor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_dashboard_contents">
+        <PropertyRef Name="floorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="acc_dash_sensor_Id">
+    <End Role="acc_sensors" Type="Self.acc_sensors" Multiplicity="0..1" />
+    <End Role="acc_dashboard_contents" Type="Self.acc_dashboard_contents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_sensors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_dashboard_contents">
+        <PropertyRef Name="sensorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="device_type_parent">
+    <End Role="users" Type="Self.users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_device_type" Type="Self.acc_device_type" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_device_type">
+        <PropertyRef Name="parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="acc_device_Id">
+    <End Role="acc_devices" Type="Self.acc_devices" Multiplicity="0..1" />
+    <End Role="acc_machine" Type="Self.acc_machine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_devices">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_machine">
+        <PropertyRef Name="deviceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Access_MachineId">
+    <End Role="acc_devices" Type="Self.acc_devices" Multiplicity="0..1" />
+    <End Role="acc_sensors" Type="Self.acc_sensors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_devices">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_sensors">
+        <PropertyRef Name="machineId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cameraId">
+    <End Role="acc_devices" Type="Self.acc_devices" Multiplicity="0..1" />
+    <End Role="acc_strangers" Type="Self.acc_strangers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_devices">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_strangers">
+        <PropertyRef Name="cameraId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="device_floor">
+    <End Role="acc_floor" Type="Self.acc_floor" Multiplicity="0..1" />
+    <End Role="acc_devices" Type="Self.acc_devices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_floor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_devices">
+        <PropertyRef Name="floor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="device_parent">
+    <End Role="users" Type="Self.users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_devices" Type="Self.acc_devices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_devices">
+        <PropertyRef Name="parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="door_device">
+    <End Role="acc_devices" Type="Self.acc_devices" Multiplicity="0..1" />
+    <End Role="acc_doors" Type="Self.acc_doors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_devices">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_doors">
+        <PropertyRef Name="device_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="parent_device">
+    <End Role="users" Type="Self.users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_doors" Type="Self.acc_doors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_doors">
+        <PropertyRef Name="parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="department_emp">
+    <End Role="acc_emp_department" Type="Self.acc_emp_department" Multiplicity="0..1" />
+    <End Role="acc_employee" Type="Self.acc_employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_emp_department">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_employee">
+        <PropertyRef Name="department" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="department_parent">
+    <End Role="users" Type="Self.users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_emp_department" Type="Self.acc_emp_department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_emp_department">
+        <PropertyRef Name="parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="emp_type">
+    <End Role="acc_emp_type" Type="Self.acc_emp_type" Multiplicity="0..1" />
+    <End Role="acc_employee" Type="Self.acc_employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_emp_type">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_employee">
+        <PropertyRef Name="emp_type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="parentwithuser">
+    <End Role="users" Type="Self.users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_emp_type" Type="Self.acc_emp_type" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_emp_type">
+        <PropertyRef Name="parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="acc_emp_v_Id">
+    <End Role="acc_employee" Type="Self.acc_employee" Multiplicity="0..1" />
+    <End Role="acc_visits" Type="Self.acc_visits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_visits">
+        <PropertyRef Name="employeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="emp_parent">
+    <End Role="users" Type="Self.users" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_employee" Type="Self.acc_employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_employee">
+        <PropertyRef Name="parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="acc_floor_Id">
+    <End Role="acc_floor" Type="Self.acc_floor" Multiplicity="0..1" />
+    <End Role="acc_machine" Type="Self.acc_machine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_floor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_machine">
+        <PropertyRef Name="floorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="acc_sw_floor_Id">
+    <End Role="acc_floor" Type="Self.acc_floor" Multiplicity="0..1" />
+    <End Role="acc_sensor_widget_content" Type="Self.acc_sensor_widget_content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_floor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_sensor_widget_content">
+        <PropertyRef Name="floorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Access_FloorId">
+    <End Role="acc_floor" Type="Self.acc_floor" Multiplicity="0..1" />
+    <End Role="acc_sensors" Type="Self.acc_sensors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_floor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_sensors">
+        <PropertyRef Name="floorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="floor_parent">
+    <End Role="users" Type="Self.users" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_floor" Type="Self.acc_floor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_floor">
+        <PropertyRef Name="parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="subarea_floor">
+    <End Role="acc_subarea" Type="Self.acc_subarea" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_floor" Type="Self.acc_floor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_subarea">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_floor">
+        <PropertyRef Name="subarea_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="geofenceparent">
+    <End Role="users" Type="Self.users" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_gefence" Type="Self.acc_gefence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_gefence">
+        <PropertyRef Name="parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="integration_parent">
+    <End Role="users" Type="Self.users" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_integration" Type="Self.acc_integration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_integration">
+        <PropertyRef Name="parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="acc_role_sensor_Id">
+    <End Role="acc_role_of_sensors" Type="Self.acc_role_of_sensors" Multiplicity="0..1" />
+    <End Role="acc_sensor_roles" Type="Self.acc_sensor_roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_role_of_sensors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_sensor_roles">
+        <PropertyRef Name="roleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="rolesparent">
+    <End Role="users" Type="Self.users" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_roles" Type="Self.acc_roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_roles">
+        <PropertyRef Name="parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="scenario_parent">
+    <End Role="users" Type="Self.users" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_scenarios" Type="Self.acc_scenarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_scenarios">
+        <PropertyRef Name="parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="senario_sensor">
+    <End Role="acc_sensors" Type="Self.acc_sensors" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_scenarios" Type="Self.acc_scenarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_sensors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_scenarios">
+        <PropertyRef Name="target_sensor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="sensor_analytcs_mac">
+    <End Role="acc_sensors" Type="Self.acc_sensors" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_sensor_analytics" Type="Self.acc_sensor_analytics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_sensors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_sensor_analytics">
+        <PropertyRef Name="sensor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="acc_sensor_Id">
+    <End Role="acc_sensors" Type="Self.acc_sensors" Multiplicity="0..1" />
+    <End Role="acc_sensor_roles" Type="Self.acc_sensor_roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_sensors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_sensor_roles">
+        <PropertyRef Name="sensorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="type_id_sensor">
+    <End Role="acc_sensor_types" Type="Self.acc_sensor_types" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_sensor_types_keys" Type="Self.acc_sensor_types_keys" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_sensor_types">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_sensor_types_keys">
+        <PropertyRef Name="type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="sensor_type_key">
+    <End Role="acc_sensor_types_keys" Type="Self.acc_sensor_types_keys" Multiplicity="0..1" />
+    <End Role="acc_sensors_key" Type="Self.acc_sensors_key" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_sensor_types_keys">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_sensors_key">
+        <PropertyRef Name="sensor_type_key_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="sensorWidget_Id">
+    <End Role="acc_sensor_widgets" Type="Self.acc_sensor_widgets" Multiplicity="0..1" />
+    <End Role="acc_sensor_widget_content" Type="Self.acc_sensor_widget_content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_sensor_widgets">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_sensor_widget_content">
+        <PropertyRef Name="sensorWidgetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="sensor_id_key">
+    <End Role="acc_sensors" Type="Self.acc_sensors" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_sensors_key" Type="Self.acc_sensors_key" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_sensors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_sensors_key">
+        <PropertyRef Name="sensor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="sensor_parent">
+    <End Role="users" Type="Self.users" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_sensors" Type="Self.acc_sensors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_sensors">
+        <PropertyRef Name="parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="subarea_parent">
+    <End Role="users" Type="Self.users" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_subarea" Type="Self.acc_subarea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_subarea">
+        <PropertyRef Name="parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ftp_parent">
+    <End Role="users" Type="Self.users" Multiplicity="0..1" />
+    <End Role="acc_uetv_credentials" Type="Self.acc_uetv_credentials" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_uetv_credentials">
+        <PropertyRef Name="parentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="acc_visit_Id">
+    <End Role="acc_visits" Type="Self.acc_visits" Multiplicity="0..1" />
+    <End Role="acc_visitor" Type="Self.acc_visitor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_visits">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_visitor">
+        <PropertyRef Name="visitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="visitor_parent">
+    <End Role="users" Type="Self.users" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_visitor" Type="Self.acc_visitor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_visitor">
+        <PropertyRef Name="parentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="acc_zone_parent">
+    <End Role="acc_zone" Type="Self.acc_zone" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acc_zone1" Type="Self.acc_zone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="acc_zone">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acc_zone1">
+        <PropertyRef Name="parent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ahmedEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="acc_admin_log" EntityType="Self.acc_admin_log" />
+    <EntitySet Name="acc_aicameraanalytics" EntityType="Self.acc_aicameraanalytics" />
+    <EntitySet Name="acc_alerts" EntityType="Self.acc_alerts" />
+    <EntitySet Name="acc_area" EntityType="Self.acc_area" />
+    <EntitySet Name="acc_assign_emp_access" EntityType="Self.acc_assign_emp_access" />
+    <EntitySet Name="acc_basemaps" EntityType="Self.acc_basemaps" />
+    <EntitySet Name="acc_cameras_records" EntityType="Self.acc_cameras_records" />
+    <EntitySet Name="acc_collect_data" EntityType="Self.acc_collect_data" />
+    <EntitySet Name="acc_dashboard" EntityType="Self.acc_dashboard" />
+    <EntitySet Name="acc_dashboard_contents" EntityType="Self.acc_dashboard_contents" />
+    <EntitySet Name="acc_device_type" EntityType="Self.acc_device_type" />
+    <EntitySet Name="acc_devices" EntityType="Self.acc_devices" />
+    <EntitySet Name="acc_doors" EntityType="Self.acc_doors" />
+    <EntitySet Name="acc_emp_department" EntityType="Self.acc_emp_department" />
+    <EntitySet Name="acc_emp_type" EntityType="Self.acc_emp_type" />
+    <EntitySet Name="acc_employee" EntityType="Self.acc_employee" />
+    <EntitySet Name="acc_event_exced" EntityType="Self.acc_event_exced" />
+    <EntitySet Name="acc_floor" EntityType="Self.acc_floor" />
+    <EntitySet Name="acc_gefence" EntityType="Self.acc_gefence" />
+    <EntitySet Name="acc_integration" EntityType="Self.acc_integration" />
+    <EntitySet Name="acc_machine" EntityType="Self.acc_machine" />
+    <EntitySet Name="acc_mail_server_configuration" EntityType="Self.acc_mail_server_configuration" />
+    <EntitySet Name="acc_role_of_sensors" EntityType="Self.acc_role_of_sensors" />
+    <EntitySet Name="acc_roles" EntityType="Self.acc_roles" />
+    <EntitySet Name="acc_scenarios" EntityType="Self.acc_scenarios" />
+    <EntitySet Name="acc_sensor_analytics" EntityType="Self.acc_sensor_analytics" />
+    <EntitySet Name="acc_sensor_analytics_dummy_data" EntityType="Self.acc_sensor_analytics_dummy_data" />
+    <EntitySet Name="acc_sensor_roles" EntityType="Self.acc_sensor_roles" />
+    <EntitySet Name="acc_sensor_types" EntityType="Self.acc_sensor_types" />
+    <EntitySet Name="acc_sensor_types_keys" EntityType="Self.acc_sensor_types_keys" />
+    <EntitySet Name="acc_sensor_widget_content" EntityType="Self.acc_sensor_widget_content" />
+    <EntitySet Name="acc_sensor_widgets" EntityType="Self.acc_sensor_widgets" />
+    <EntitySet Name="acc_sensors" EntityType="Self.acc_sensors" />
+    <EntitySet Name="acc_sensors_key" EntityType="Self.acc_sensors_key" />
+    <EntitySet Name="acc_strangers" EntityType="Self.acc_strangers" />
+    <EntitySet Name="acc_subarea" EntityType="Self.acc_subarea" />
+    <EntitySet Name="acc_uetv_credentials" EntityType="Self.acc_uetv_credentials" />
+    <EntitySet Name="acc_visitor" EntityType="Self.acc_visitor" />
+    <EntitySet Name="acc_visits" EntityType="Self.acc_visits" />
+    <EntitySet Name="acc_zone" EntityType="Self.acc_zone" />
+    <EntitySet Name="users" EntityType="Self.users" />
+    <EntitySet Name="compls" EntityType="Self.compls" />
+    <EntitySet Name="edusecstdnumb" EntityType="Self.edusecstdnumb" />
+    <EntitySet Name="fleet_rpts" EntityType="Self.fleet_rpts" />
+    <EntitySet Name="getftpdirectortforsensor" EntityType="Self.getftpdirectortforsensor" />
+    <EntitySet Name="invalidmainstockitemquan" EntityType="Self.invalidmainstockitemquan" />
+    <EntitySet Name="invalidsubstockitemquan" EntityType="Self.invalidsubstockitemquan" />
+    <EntitySet Name="schoolusers" EntityType="Self.schoolusers" />
+    <AssociationSet Name="UE_CamId" Association="Self.UE_CamId">
+      <End Role="acc_devices" EntitySet="acc_devices" />
+      <End Role="acc_aicameraanalytics" EntitySet="acc_aicameraanalytics" />
+    </AssociationSet>
+    <AssociationSet Name="UE_StangerId" Association="Self.UE_StangerId">
+      <End Role="acc_strangers" EntitySet="acc_strangers" />
+      <End Role="acc_aicameraanalytics" EntitySet="acc_aicameraanalytics" />
+    </AssociationSet>
+    <AssociationSet Name="acc_area_Id" Association="Self.acc_area_Id">
+      <End Role="acc_area" EntitySet="acc_area" />
+      <End Role="acc_machine" EntitySet="acc_machine" />
+    </AssociationSet>
+    <AssociationSet Name="acc_dash_area_Id" Association="Self.acc_dash_area_Id">
+      <End Role="acc_area" EntitySet="acc_area" />
+      <End Role="acc_dashboard_contents" EntitySet="acc_dashboard_contents" />
+    </AssociationSet>
+    <AssociationSet Name="acc_sw_area_Id" Association="Self.acc_sw_area_Id">
+      <End Role="acc_area" EntitySet="acc_area" />
+      <End Role="acc_sensor_widget_content" EntitySet="acc_sensor_widget_content" />
+    </AssociationSet>
+    <AssociationSet Name="acc_zone_area" Association="Self.acc_zone_area">
+      <End Role="acc_area" EntitySet="acc_area" />
+      <End Role="acc_zone" EntitySet="acc_zone" />
+    </AssociationSet>
+    <AssociationSet Name="Access_AreaId" Association="Self.Access_AreaId">
+      <End Role="acc_area" EntitySet="acc_area" />
+      <End Role="acc_sensors" EntitySet="acc_sensors" />
+    </AssociationSet>
+    <AssociationSet Name="area_floor" Association="Self.area_floor">
+      <End Role="acc_area" EntitySet="acc_area" />
+      <End Role="acc_floor" EntitySet="acc_floor" />
+    </AssociationSet>
+    <AssociationSet Name="area_parent" Association="Self.area_parent">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_area" EntitySet="acc_area" />
+    </AssociationSet>
+    <AssociationSet Name="device_area" Association="Self.device_area">
+      <End Role="acc_area" EntitySet="acc_area" />
+      <End Role="acc_devices" EntitySet="acc_devices" />
+    </AssociationSet>
+    <AssociationSet Name="geofencearea" Association="Self.geofencearea">
+      <End Role="acc_area" EntitySet="acc_area" />
+      <End Role="acc_gefence" EntitySet="acc_gefence" />
+    </AssociationSet>
+    <AssociationSet Name="subarea_areaid" Association="Self.subarea_areaid">
+      <End Role="acc_area" EntitySet="acc_area" />
+      <End Role="acc_subarea" EntitySet="acc_subarea" />
+    </AssociationSet>
+    <AssociationSet Name="empmachparent" Association="Self.empmachparent">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_assign_emp_access" EntitySet="acc_assign_emp_access" />
+    </AssociationSet>
+    <AssociationSet Name="basemapparent" Association="Self.basemapparent">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_basemaps" EntitySet="acc_basemaps" />
+    </AssociationSet>
+    <AssociationSet Name="ue_camera_Id" Association="Self.ue_camera_Id">
+      <End Role="acc_devices" EntitySet="acc_devices" />
+      <End Role="acc_cameras_records" EntitySet="acc_cameras_records" />
+    </AssociationSet>
+    <AssociationSet Name="acc_cd_floorId" Association="Self.acc_cd_floorId">
+      <End Role="acc_floor" EntitySet="acc_floor" />
+      <End Role="acc_collect_data" EntitySet="acc_collect_data" />
+    </AssociationSet>
+    <AssociationSet Name="acc_g_deviceId" Association="Self.acc_g_deviceId">
+      <End Role="acc_devices" EntitySet="acc_devices" />
+      <End Role="acc_collect_data" EntitySet="acc_collect_data" />
+    </AssociationSet>
+    <AssociationSet Name="acc_dashboard_Id" Association="Self.acc_dashboard_Id">
+      <End Role="acc_dashboard" EntitySet="acc_dashboard" />
+      <End Role="acc_dashboard_contents" EntitySet="acc_dashboard_contents" />
+    </AssociationSet>
+    <AssociationSet Name="acc_dash_floor_Id" Association="Self.acc_dash_floor_Id">
+      <End Role="acc_floor" EntitySet="acc_floor" />
+      <End Role="acc_dashboard_contents" EntitySet="acc_dashboard_contents" />
+    </AssociationSet>
+    <AssociationSet Name="acc_dash_sensor_Id" Association="Self.acc_dash_sensor_Id">
+      <End Role="acc_sensors" EntitySet="acc_sensors" />
+      <End Role="acc_dashboard_contents" EntitySet="acc_dashboard_contents" />
+    </AssociationSet>
+    <AssociationSet Name="device_type_parent" Association="Self.device_type_parent">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_device_type" EntitySet="acc_device_type" />
+    </AssociationSet>
+    <AssociationSet Name="acc_device_Id" Association="Self.acc_device_Id">
+      <End Role="acc_devices" EntitySet="acc_devices" />
+      <End Role="acc_machine" EntitySet="acc_machine" />
+    </AssociationSet>
+    <AssociationSet Name="Access_MachineId" Association="Self.Access_MachineId">
+      <End Role="acc_devices" EntitySet="acc_devices" />
+      <End Role="acc_sensors" EntitySet="acc_sensors" />
+    </AssociationSet>
+    <AssociationSet Name="cameraId" Association="Self.cameraId">
+      <End Role="acc_devices" EntitySet="acc_devices" />
+      <End Role="acc_strangers" EntitySet="acc_strangers" />
+    </AssociationSet>
+    <AssociationSet Name="device_floor" Association="Self.device_floor">
+      <End Role="acc_floor" EntitySet="acc_floor" />
+      <End Role="acc_devices" EntitySet="acc_devices" />
+    </AssociationSet>
+    <AssociationSet Name="device_parent" Association="Self.device_parent">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_devices" EntitySet="acc_devices" />
+    </AssociationSet>
+    <AssociationSet Name="door_device" Association="Self.door_device">
+      <End Role="acc_devices" EntitySet="acc_devices" />
+      <End Role="acc_doors" EntitySet="acc_doors" />
+    </AssociationSet>
+    <AssociationSet Name="parent_device" Association="Self.parent_device">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_doors" EntitySet="acc_doors" />
+    </AssociationSet>
+    <AssociationSet Name="department_emp" Association="Self.department_emp">
+      <End Role="acc_emp_department" EntitySet="acc_emp_department" />
+      <End Role="acc_employee" EntitySet="acc_employee" />
+    </AssociationSet>
+    <AssociationSet Name="department_parent" Association="Self.department_parent">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_emp_department" EntitySet="acc_emp_department" />
+    </AssociationSet>
+    <AssociationSet Name="emp_type" Association="Self.emp_type">
+      <End Role="acc_emp_type" EntitySet="acc_emp_type" />
+      <End Role="acc_employee" EntitySet="acc_employee" />
+    </AssociationSet>
+    <AssociationSet Name="parentwithuser" Association="Self.parentwithuser">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_emp_type" EntitySet="acc_emp_type" />
+    </AssociationSet>
+    <AssociationSet Name="acc_emp_v_Id" Association="Self.acc_emp_v_Id">
+      <End Role="acc_employee" EntitySet="acc_employee" />
+      <End Role="acc_visits" EntitySet="acc_visits" />
+    </AssociationSet>
+    <AssociationSet Name="emp_parent" Association="Self.emp_parent">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_employee" EntitySet="acc_employee" />
+    </AssociationSet>
+    <AssociationSet Name="acc_floor_Id" Association="Self.acc_floor_Id">
+      <End Role="acc_floor" EntitySet="acc_floor" />
+      <End Role="acc_machine" EntitySet="acc_machine" />
+    </AssociationSet>
+    <AssociationSet Name="acc_sw_floor_Id" Association="Self.acc_sw_floor_Id">
+      <End Role="acc_floor" EntitySet="acc_floor" />
+      <End Role="acc_sensor_widget_content" EntitySet="acc_sensor_widget_content" />
+    </AssociationSet>
+    <AssociationSet Name="Access_FloorId" Association="Self.Access_FloorId">
+      <End Role="acc_floor" EntitySet="acc_floor" />
+      <End Role="acc_sensors" EntitySet="acc_sensors" />
+    </AssociationSet>
+    <AssociationSet Name="floor_parent" Association="Self.floor_parent">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_floor" EntitySet="acc_floor" />
+    </AssociationSet>
+    <AssociationSet Name="subarea_floor" Association="Self.subarea_floor">
+      <End Role="acc_subarea" EntitySet="acc_subarea" />
+      <End Role="acc_floor" EntitySet="acc_floor" />
+    </AssociationSet>
+    <AssociationSet Name="geofenceparent" Association="Self.geofenceparent">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_gefence" EntitySet="acc_gefence" />
+    </AssociationSet>
+    <AssociationSet Name="integration_parent" Association="Self.integration_parent">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_integration" EntitySet="acc_integration" />
+    </AssociationSet>
+    <AssociationSet Name="acc_role_sensor_Id" Association="Self.acc_role_sensor_Id">
+      <End Role="acc_role_of_sensors" EntitySet="acc_role_of_sensors" />
+      <End Role="acc_sensor_roles" EntitySet="acc_sensor_roles" />
+    </AssociationSet>
+    <AssociationSet Name="rolesparent" Association="Self.rolesparent">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_roles" EntitySet="acc_roles" />
+    </AssociationSet>
+    <AssociationSet Name="scenario_parent" Association="Self.scenario_parent">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_scenarios" EntitySet="acc_scenarios" />
+    </AssociationSet>
+    <AssociationSet Name="senario_sensor" Association="Self.senario_sensor">
+      <End Role="acc_sensors" EntitySet="acc_sensors" />
+      <End Role="acc_scenarios" EntitySet="acc_scenarios" />
+    </AssociationSet>
+    <AssociationSet Name="sensor_analytcs_mac" Association="Self.sensor_analytcs_mac">
+      <End Role="acc_sensors" EntitySet="acc_sensors" />
+      <End Role="acc_sensor_analytics" EntitySet="acc_sensor_analytics" />
+    </AssociationSet>
+    <AssociationSet Name="acc_sensor_Id" Association="Self.acc_sensor_Id">
+      <End Role="acc_sensors" EntitySet="acc_sensors" />
+      <End Role="acc_sensor_roles" EntitySet="acc_sensor_roles" />
+    </AssociationSet>
+    <AssociationSet Name="type_id_sensor" Association="Self.type_id_sensor">
+      <End Role="acc_sensor_types" EntitySet="acc_sensor_types" />
+      <End Role="acc_sensor_types_keys" EntitySet="acc_sensor_types_keys" />
+    </AssociationSet>
+    <AssociationSet Name="sensor_type_key" Association="Self.sensor_type_key">
+      <End Role="acc_sensor_types_keys" EntitySet="acc_sensor_types_keys" />
+      <End Role="acc_sensors_key" EntitySet="acc_sensors_key" />
+    </AssociationSet>
+    <AssociationSet Name="sensorWidget_Id" Association="Self.sensorWidget_Id">
+      <End Role="acc_sensor_widgets" EntitySet="acc_sensor_widgets" />
+      <End Role="acc_sensor_widget_content" EntitySet="acc_sensor_widget_content" />
+    </AssociationSet>
+    <AssociationSet Name="sensor_id_key" Association="Self.sensor_id_key">
+      <End Role="acc_sensors" EntitySet="acc_sensors" />
+      <End Role="acc_sensors_key" EntitySet="acc_sensors_key" />
+    </AssociationSet>
+    <AssociationSet Name="sensor_parent" Association="Self.sensor_parent">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_sensors" EntitySet="acc_sensors" />
+    </AssociationSet>
+    <AssociationSet Name="subarea_parent" Association="Self.subarea_parent">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_subarea" EntitySet="acc_subarea" />
+    </AssociationSet>
+    <AssociationSet Name="ftp_parent" Association="Self.ftp_parent">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_uetv_credentials" EntitySet="acc_uetv_credentials" />
+    </AssociationSet>
+    <AssociationSet Name="acc_visit_Id" Association="Self.acc_visit_Id">
+      <End Role="acc_visits" EntitySet="acc_visits" />
+      <End Role="acc_visitor" EntitySet="acc_visitor" />
+    </AssociationSet>
+    <AssociationSet Name="visitor_parent" Association="Self.visitor_parent">
+      <End Role="users" EntitySet="users" />
+      <End Role="acc_visitor" EntitySet="acc_visitor" />
+    </AssociationSet>
+    <AssociationSet Name="acc_zone_parent" Association="Self.acc_zone_parent">
+      <End Role="acc_zone" EntitySet="acc_zone" />
+      <End Role="acc_zone1" EntitySet="acc_zone" />
+    </AssociationSet>
+    <FunctionImport Name="GetEventsBieLabelData" ReturnType="Collection(ahmedModel.GetEventsBieLabelData_Result)">
+      <Parameter Name="start_date" Mode="In" Type="DateTime" />
+      <Parameter Name="end_date" Mode="In" Type="DateTime" />
+      <Parameter Name="alertValue" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetSensorsAnalyticsData" ReturnType="Collection(ahmedModel.GetSensorsAnalyticsData_Result)">
+      <Parameter Name="start_date" Mode="In" Type="DateTime" />
+      <Parameter Name="end_date" Mode="In" Type="DateTime" />
+      <Parameter Name="sensorId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetSensorsTableDataProcedure" ReturnType="Collection(ahmedModel.GetSensorsTableDataProcedure_Result)">
+      <Parameter Name="start_date" Mode="In" Type="DateTime" />
+      <Parameter Name="end_date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="OutOfDateWOs" ReturnType="Collection(ahmedModel.OutOfDateWOs_Result)">
+      <Parameter Name="GivenDate" Mode="In" Type="DateTime" />
+      <Parameter Name="parent" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="GetEventsBieLabelData_Result" />
+  <ComplexType Name="GetSensorsAnalyticsData_Result" />
+  <ComplexType Name="GetSensorsTableDataProcedure_Result" />
+  <ComplexType Name="OutOfDateWOs_Result" />
+</Schema>
