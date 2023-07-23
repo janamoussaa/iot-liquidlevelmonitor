@@ -1,0 +1,69 @@
+﻿@model IEnumerable<UETV.Models.acc_sensor_analytics>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Index", "acc_sensor_analytics", FormMethod.Get, new { @style = "margin-right:100px margin-top:50px" }))
+{
+    <div class="form-group">
+        @Html.Label("Date From", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+       <input id="dFrom" type="datetime-local"  max="@DateTime.Now" min="@DateTime.Now.AddYears(-1)" />
+
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        @Html.Label("Date To", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <input id="dTo" type="datetime-local"     max="@DateTime.Now" min="@DateTime.Now.AddYears(-1)" />
+
+
+        </div>
+        <input type="submit" value="Submit" id="search" class="btn btn-default" />
+    </div>
+
+
+
+}
+<style>
+      </style>
+<br /><br />
+<table class="table" > 
+    <tbody style="overflow:scroll;height: 80em;">
+        <tr>
+            <th>
+                @Html.Label("Sensor Name")
+            </th>
+            <th>
+                @Html.Label("Value")
+            </th>
+            <th>
+                @Html.Label("Creation Time")
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.acc_sensors.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.value)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.creationTime)
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>

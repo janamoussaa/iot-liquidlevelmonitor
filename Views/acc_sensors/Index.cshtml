@@ -1,0 +1,60 @@
+﻿@model IEnumerable<UETV.Models.acc_sensors>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+     
+    
+        <th>
+            @Html.DisplayNameFor(model => model.max_value)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.min_value)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastUpdateTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+    
+        <td>
+            @Html.DisplayFor(modelItem => item.max_value)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.min_value)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastUpdateTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

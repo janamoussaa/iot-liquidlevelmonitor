@@ -1,0 +1,74 @@
+﻿@model UETV.Models.acc_sensors
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>acc_sensors</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lng)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lng)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.parent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.parent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.max_value)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.max_value)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.min_value)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.min_value)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastUpdateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastUpdateTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

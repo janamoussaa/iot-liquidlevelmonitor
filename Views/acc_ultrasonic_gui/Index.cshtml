@@ -1,0 +1,302 @@
+@model IEnumerable<UETV.Models.acc_sensors>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>ESP IOT DASHBOARD</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="http://localhost:56111/style.css">
+        <script src="http://cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/all/gauge.min.js"></script>
+    </head>
+    <body>
+        <div class="topnav">
+            <h1>Fuel Petrol Stations' Tanks Monitoring System</h1>
+        </div>
+        <div class="content">
+            <div class="card-grid">
+                @foreach (var item in Model) {
+                    string itemId = "gauge-temperature-" + item.id.ToString();
+                <div class="card">
+                    <p class="card-title">@item.name+ "in time  "+@item.lastUpdateTime</p>
+                    <canvas id="@itemId"></canvas>
+                </div>
+                    itemId = "gauge-humidity-" + item.id.ToString();
+                <div class="card">
+                    <p class="card-title">@item.name + "in time  "+@item.lastUpdateTime</p>
+                    <canvas id="@itemId"></canvas>
+                </div>
+           
+                }
+            </div>
+        </div>
+        <script>
+
+            // Get current sensor readings when the page loads
+            //window.addEventListener('load', getReadings);
+            getReadings();
+
+            // Create Temperature Gauge
+            var gaugeTemp01 = new LinearGauge({
+                renderTo: 'gauge-temperature-1',
+                width: 100,
+                height: 400,
+                units: "Liquid Level",
+                minValue: @Model.Where(v=>v.id==1).FirstOrDefault().min_value,
+                startAngle: 90,
+                ticksAngle: 180,
+                maxValue: @Model.Where(v=>v.id==1).FirstOrDefault().max_value,
+                colorValueBoxRect: "#049faa",
+                colorValueBoxRectEnd: "#049faa",
+                colorValueBoxBackground: "#f1fbfc",
+                valueDec: 2,
+                valueInt: 2,
+                majorTicks: [
+                     "0",
+                    "10",
+                    "20",
+                    "30",
+                    "40",
+                    "50",
+                    "60",
+                    "70",
+                    "80",
+                    "90",
+                    "100",
+                    "110",
+                    "120",
+                    "130",
+                    "140",
+                    "150"
+                ],
+                minorTicks: 4,
+                strokeTicks: true,
+                //highlights: [
+                //    {
+                //        "from": 30,
+                //        "to": 40,
+                //        "color": "rgba(200, 50, 50, .75)"
+                //    }
+                //],
+                colorPlate: "#fff",
+                colorBarProgress: "#CC2936",
+                colorBarProgressEnd: "#049faa",
+                borderShadowWidth: 0,
+                borders: false,
+                needleType: "arrow",
+                needleWidth: 2,
+                needleCircleSize: 7,
+                needleCircleOuter: true,
+                needleCircleInner: false,
+                animationDuration: 1500,
+                animationRule: "linear",
+                barWidth: 10,
+            }).draw();
+            var gaugeTemp02 = new LinearGauge({
+                renderTo: 'gauge-temperature-2',
+                width: 100,
+                height: 400,
+                units: "Liquid Level",
+                minValue: @Model.Where(v=>v.id==1).FirstOrDefault().min_value,
+                startAngle: 90,
+                ticksAngle: 180,
+                maxValue: @Model.Where(v=>v.id==1).FirstOrDefault().max_value,
+                colorValueBoxRect: "#049faa",
+                colorValueBoxRectEnd: "#049faa",
+                colorValueBoxBackground: "#f1fbfc",
+                valueDec: 2,
+                valueInt: 2,
+                majorTicks: [
+                    "0",
+                    "10",
+                    "20",
+                    "30",
+                    "40",
+                    "50",
+                    "60",
+                    "70",
+                    "80",
+                    "90",
+                    "100",
+                    "110",
+                    "120",
+                    "130",
+                    "140",
+                    "150"
+                ],
+                minorTicks: 4,
+                strokeTicks: true,
+                //highlights: [
+                //    {
+                //        "from": 30,
+                //        "to": 40,
+                //        "color": "rgba(200, 50, 50, .75)"
+                //    }
+                //],
+                colorPlate: "#fff",
+                colorBarProgress: "#CC2936",
+                colorBarProgressEnd: "#049faa",
+                borderShadowWidth: 0,
+                borders: false,
+                needleType: "arrow",
+                needleWidth: 2,
+                needleCircleSize: 7,
+                needleCircleOuter: true,
+                needleCircleInner: false,
+                animationDuration: 1500,
+                animationRule: "linear",
+                barWidth: 10,
+            }).draw();
+            // Create Humidity Gauge
+            var gaugeHum01 = new RadialGauge({
+                renderTo: 'gauge-humidity-1',
+                width: 300,
+                height: 300,
+                units: "Liquid Level",
+                minValue: @Model.Where(v=>v.id==1).FirstOrDefault().min_value,
+                maxValue: @Model.Where(v=>v.id==1).FirstOrDefault().max_value,
+                colorValueBoxRect: "#049faa",
+                colorValueBoxRectEnd: "#049faa",
+                colorValueBoxBackground: "#f1fbfc",
+                valueInt: 2,
+                majorTicks: [
+                   "0",
+                   "10",
+                   "20",
+                   "30",
+                   "40",
+                   "50",
+                   "60",
+                   "70",
+                   "80",
+                   "90",
+                   "100",
+                   "110",
+                   "120",
+                   "130",
+                   "140",
+                   "150"
+                ],
+                minorTicks: 4,
+                strokeTicks: true,
+                //highlights: [
+                //    {
+                //        "from": 80,
+                //        "to": 100,
+                //        "color": "#03C0C1"
+                //    }
+                //],
+                colorPlate: "#fff",
+                borderShadowWidth: 0,
+                borders: false,
+                needleType: "line",
+                colorNeedle: "#007F80",
+                colorNeedleEnd: "#007F80",
+                needleWidth: 2,
+                needleCircleSize: 3,
+                colorNeedleCircleOuter: "#007F80",
+                needleCircleOuter: true,
+                needleCircleInner: false,
+                animationDuration: 1500,
+                animationRule: "linear"
+            }).draw();
+            var gaugeHum02 = new RadialGauge({
+                renderTo: 'gauge-humidity-2',
+                width: 300,
+                height: 300,
+                units: "Liquid Level",
+                minValue: @Model.Where(v=>v.id==1).FirstOrDefault().min_value,
+                maxValue: @Model.Where(v=>v.id==1).FirstOrDefault().max_value,
+                colorValueBoxRect: "#049faa",
+                colorValueBoxRectEnd: "#049faa",
+                colorValueBoxBackground: "#f1fbfc",
+                valueInt: 2,
+                majorTicks: [
+                      "0",
+                     "10",
+                     "20",
+                     "30",
+                     "40",
+                     "50",
+                     "60",
+                     "70",
+                     "80",
+                     "90",
+                     "100",
+                     "110",
+                     "120",
+                     "130",
+                     "140",
+                     "150"
+                ],
+                minorTicks: 4,
+                strokeTicks: true,
+                //highlights: [
+                //    {
+                //        "from": 80,
+                //        "to": 100,
+                //        "color": "#03C0C1"
+                //    }
+                //],
+                colorPlate: "#fff",
+                borderShadowWidth: 0,
+                borders: false,
+                needleType: "line",
+                colorNeedle: "#007F80",
+                colorNeedleEnd: "#007F80",
+                needleWidth: 2,
+                needleCircleSize: 3,
+                colorNeedleCircleOuter: "#007F80",
+                needleCircleOuter: true,
+                needleCircleInner: false,
+                animationDuration: 1500,
+                animationRule: "linear"
+            }).draw();
+            // Function to get current readings on the webpage when it loads for the first time
+
+            function getReadings() {
+
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        console.log(myObj);
+                        var temp = myObj.firstSensor;
+                        var tempMinVal = myObj.fMinVal;
+                        var tempMaxVal = myObj.fMaxVal;
+
+                        gaugeTemp01.value = temp;
+                        gaugeTemp01.minValue = tempMinVal;
+                        gaugeTemp01.maxValue = tempMaxVal;
+                        gaugeHum01.value = temp;
+                        gaugeHum01.minValue = tempMinVal;
+                        gaugeHum01.maxValue = tempMaxVal;
+
+                        //alert(gaugeTemp01.value + " " + gaugeTemp01.minValue + " " + gaugeTemp01.maxValue);
+                        //alert(gaugeHum01.value + " " + gaugeHum01.minValue + " " + gaugeHum01.maxValue);
+                        var hum = myObj.secondSensor;
+                        var humMinVal = myObj.sMinVal;
+                        var humMaxVal = myObj.sMaxVal;
+
+                        gaugeTemp02.value = hum;
+                        gaugeTemp02.minValue = humMinVal;
+                        gaugeTemp02.maxValue = humMaxVal;
+                        gaugeHum02.value = hum;
+                        gaugeHum02.minValue = humMinVal;
+                        gaugeHum02.maxValue = humMaxVal;
+                        //alert(gaugeHum02.value + " " + gaugeHum02.minValue + " " + gaugeHum02.maxValue);
+                   //     alert(gaugeTemp02.value + " " + gaugeTemp02.minValue + " " + gaugeTemp02    .maxValue);
+
+                    }
+                };
+                xhr.open("GET", "http://localhost:56111/iot_sensors_readings/getSensorReading", true);
+                xhr.send();
+
+            }
+            
+            setInterval(function() {
+                window.location.reload();
+            }, 3000);
+   
+        </script>
+    </body>
+</html>

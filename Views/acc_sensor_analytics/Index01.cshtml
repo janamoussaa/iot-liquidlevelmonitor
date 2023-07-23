@@ -1,0 +1,285 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<VechileFleetManagementSystem.Models.fleet_fines>
+@using VechileFleetManagementSystem.Models;
+@using VechileFleetManagementSystem.Controllers;
+@using System.Web.Optimization;
+@using System.Globalization;
+@{
+    ViewBag.Title = Resource.Fines;
+    ViewBag.PageHeader = Resource.Fines;
+    ViewBag.OptionalDescription = Resource.Index;
+    ahmedEntities db = new ahmedEntities();
+    List<string> AllSubUser = ViewBag.AllSub_User;
+}
+<h2>@Resource.Index</h2>
+
+<p>
+    @Html.ActionLink(Resource.CreateNewFine, "Create")
+</p>
+
+@using (Html.BeginForm("Index", "fleet_fines", FormMethod.Get, new { @style = "margin-right:100px margin-top:50px" }))
+{
+    <div class="form-group">
+        @Html.Label(Resource.FilterBy, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <select class="selectpicker" id="filBy" name="filBy" data-live-search="true">
+                <option value="" selected>@Resource.SelectChoice</option>
+                <option value="vech">@Resource.vechile</option>
+                <option value="drv">@Resource.drivers</option>
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label(Resource.Filters, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <select class="selectpicker" id="fils" name="fils" data-live-search="true">
+                <option>@Resource.SelectChoice</option>
+            </select>
+
+        </div>
+        <input type="submit" value="@Resource.ApplyFilters" id="search" class="btn btn-default" />
+    </div>
+
+
+
+}
+<br /><br />
+
+<a href="" style="position:center" id="btnSubmit">
+    <img src="~/Content/imgs/print.png" width="32" height="32" alt="print" />
+</a>
+
+<br /><br />
+<div style="overflow-x:auto;">
+    <table class="table table-striped table-responsive">
+        <tr>
+            <th>
+                @Html.ActionLink(Resource.vechile, "Index", new { sortOrder = ViewBag.vechSortParm, currentFilter = ViewBag.CurrentFilter, SearchString = Request["SearchString"] })
+            </th>
+            <th>
+                @Html.ActionLink(Resource.DriverName, "Index", new { sortOrder = ViewBag.drvSortParm, currentFilter = ViewBag.CurrentFilter, SearchString = Request["SearchString"] })
+            </th>
+            <th>
+                @Html.ActionLink(Resource.FineReson, "Index", new { sortOrder = ViewBag.resSortParm, currentFilter = ViewBag.CurrentFilter, SearchString = Request["SearchString"] })
+            </th>
+          
+            <th>
+                @Html.ActionLink(Resource.Cost, "Index", new { sortOrder = ViewBag.costSortParm, currentFilter = ViewBag.CurrentFilter, SearchString = Request["SearchString"] })
+            </th>
+            <th>
+                @Html.ActionLink(Resource.Currency, "Index", new { sortOrder = ViewBag.curSortParm, currentFilter = ViewBag.CurrentFilter, SearchString = Request["SearchString"] })
+            </th>
+            <th>
+                @Html.ActionLink(Resource.Status, "Index", new { sortOrder = ViewBag.paidSortParm, currentFilter = ViewBag.CurrentFilter, SearchString = Request["SearchString"] })
+            </th>
+            <th>
+                @Html.ActionLink(Resource.FineTime, "Index", new { sortOrder = ViewBag.timeSortParm, currentFilter = ViewBag.CurrentFilter, SearchString = Request["SearchString"] })
+            </th>
+            <th>
+                @Html.Label(Resource.IsActive)
+            </th>
+            <th>
+                @Html.Label(Resource.IsDeleted)
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.Label(db.device.Where(v => v.id == item.VechileId).FirstOrDefault()==null?"": db.device.Where(v => v.id == item.VechileId).FirstOrDefault().name)
+            </td>
+            <td>
+                @Html.Label(item.DriverId==null?"":db.driver.Where(v => v.id == item.DriverId).FirstOrDefault()==null?"Deleted Driver": db.driver.Where(v => v.id == item.DriverId).FirstOrDefault().name)
+            </td>
+            <td>
+                @Html.Label(item.Reson==null?"":item.Reson)
+            </td>
+        
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost)
+            </td>
+            <td>
+                @Html.Label(db.fleet_currency.Where(c=>c.Id==item.CurrencyId).FirstOrDefault()==null?"": db.fleet_currency.Where(c => c.Id == item.CurrencyId).FirstOrDefault().name)
+            </td>
+            
+            <td>
+                @if (item.IsPaid == true)
+                {
+                @Html.Label("Paid")
+                }
+                else
+                {
+                @Html.Label("Not Paid")
+                }
+            </td>
+            <td>
+                @Html.Label(item.FineTime.ToString("dd-MM-yyyy hh:mm", new CultureInfo("en")))
+
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDeleted)
+            </td>
+            @if (item.DriverId != null && db.driver.Where(d => d.id == item.DriverId).FirstOrDefault() != null)
+            {            <td>
+                @Html.ActionLink(Resource.Edit, "Edit", new { id = item.id }) |
+                @Html.ActionLink(Resource.Details, "Details", new { id = item.id }) @*|
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
+            </td> }
+            else
+            {
+            <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id = item.id }) |*@
+                @Html.ActionLink(Resource.Details, "Details", new { id = item.id }) @*|
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
+                </td>
+            }
+        </tr>
+        }
+
+    </table>
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+        new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter, searchString = Request["SearchString"] }))
+</div>
+
+<div style="overflow-x:auto;" class="panel" id="Grid" hidden>
+    <table class="table table-striped table-responsive">
+        <tr>
+      
+            <th style="background-color: #B8DBFD;border: 1px solid #ccc">
+                @Html.Label(Resource.vechile)
+            </th>
+            <th style="background-color: #B8DBFD;border: 1px solid #ccc">
+                @Html.Label(Resource.drivers)
+            </th>
+            <th style="background-color: #B8DBFD;border: 1px solid #ccc">
+                @Html.Label(Resource.FineReson)
+            </th>
+            <th style="background-color: #B8DBFD;border: 1px solid #ccc">
+                @Html.Label(Resource.Cost)
+            </th>
+            <th style="background-color: #B8DBFD;border: 1px solid #ccc">
+                @Html.Label(Resource.Currency)
+            </th>
+            <th style="background-color: #B8DBFD;border: 1px solid #ccc">
+                @Html.Label(Resource.Status)
+            </th>
+            <th style="background-color: #B8DBFD;border: 1px solid #ccc">
+                @Html.Label(Resource.FineTime)
+            </th>
+        </tr>
+
+        @foreach (var item in db.fleet_fines.Where(f =>AllSubUser.Contains(f.parent)).ToList())
+        {
+
+        <tr>
+            <td style="width:120px;border: 1px solid #ccc">
+                @Html.Label(db.device.Where(v => v.id == item.VechileId).FirstOrDefault() == null ? "" : db.device.Where(v => v.id == item.VechileId).FirstOrDefault().name)
+            </td>
+            <td style="width:120px;border: 1px solid #ccc">
+                @Html.Label(item.DriverId == null ? "" : db.driver.Where(v => v.id == item.DriverId).FirstOrDefault() == null ? "Deleted Driver" : db.driver.Where(v => v.id == item.DriverId).FirstOrDefault().name)
+            </td>
+            <td style="width:120px;border: 1px solid #ccc">
+                @Html.Label(item.Reson == null ? "" : item.Reson)
+            </td>
+            <td style="width:120px;border: 1px solid #ccc">
+                @Html.DisplayFor(modelItem => item.Cost)
+            </td>
+            <td style="width:120px;border: 1px solid #ccc">
+                @Html.Label(db.fleet_currency.Where(c => c.Id == item.CurrencyId).FirstOrDefault() == null ? "" : db.fleet_currency.Where(c => c.Id == item.CurrencyId).FirstOrDefault().name)
+            </td>
+
+            <td style="width:120px;border: 1px solid #ccc">
+                @if (item.IsPaid == true)
+                {
+                @Html.Label("Paid")
+                }
+                else
+                {
+                @Html.Label("Not Paid")
+                }
+            </td>
+            <td style="width:120px;border: 1px solid #ccc">
+              @Html.Label(item.FineTime.ToString("dd-MM-yyyy hh:mm", new CultureInfo("en")))    
+            </td>
+            
+        </tr>
+
+        }
+
+    </table>
+   
+
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/scripts/LiteNLine.js"></script>
+
+    <script type="text/javascript">
+                $(function () {
+
+                    $('#filBy').change(function (e) {
+                        if (e.target.value !== "")
+                            RetriveFilters(e.target);
+                        else
+                            $('#fils').empty().append('<option></option>');
+                    });
+
+
+                    function RetriveFilters(target) {
+                        var filter = target.value;
+                        var FilterSelect = $('#fils');
+                        $.ajax({
+                            type: "GET",
+                            url: "../fleet_complaints/RetriveFilters",
+                            data: { filter: filter }
+                        }).done(function (result) {
+                            $('#fils').empty().append('<option></option>').selectpicker("refresh");
+                     
+                            $.each(result, function (index, element) {
+                                $('#fils').append('<option value="' + element.Id + '">' + element.Name + '</option>').selectpicker("refresh");
+                            });
+                        });
+                    }
+                });
+
+                $(document).ready(function () {
+
+                    // Enable Live Search.
+                    $('#fils').attr('data-live-search', true);
+                    $('#filBy').attr('data-live-search', true);
+
+                });
+                $(function () {
+                    $("#btnSubmit").click(function () {
+                        PrintTextbox();
+                        //$("input[name='GridHtml']").val($("#Grid").html());
+                    });
+                });
+                function PrintTextbox() {
+                    var text_box = document.getElementById("Grid");
+                    var printWindow = window.open('', '', 'height=400,width=800');
+                    printWindow.document.write('<html><head><title>Name of File</title>');
+                    printWindow.document.write('</head><body >');
+                    printWindow.document.write(text_box.innerHTML);
+                    printWindow.document.write('</body></html>');
+                    printWindow.document.close();
+                    setTimeout(function () {
+                        printWindow.print();
+                    }, 500);
+                    return false;
+                }
+
+
+
+    </script>
+}
